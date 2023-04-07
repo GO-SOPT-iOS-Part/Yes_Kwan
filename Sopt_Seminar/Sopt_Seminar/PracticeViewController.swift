@@ -21,12 +21,26 @@ final class PracticeViewController: UIViewController {
         return label
     }()
     
+    private lazy var slider: UISlider = {
+        let slide = UISlider(frame: CGRect(x: 0, y: 0, width: 300, height: 20))
+        slide.isContinuous = true
+        slide.tintColor = .green
+        return slide
+    }()
+    
+    private lazy var toggle: UISwitch = {
+        let toggle = UISwitch(frame: CGRect(x: 150, y: 150, width: 0, height: 0))
+        toggle.setOn(true, animated: false)
+        return toggle
+    }()
+    
+    
     // 버튼을 사용할 때 인스턴스를 생성하게끔 하기 위하여 lazy var로 설정해줌
     private lazy var presentButton: UIButton = {
         // 버튼 객체 생성
         let button = UIButton()
         // 버튼제목, 배경색, 제목글자색 설정
-        button.setTitle("push!", for: .normal)
+        button.setTitle("present!", for: .normal)
         button.backgroundColor = .yellow
         button.setTitleColor(.blue, for: .normal)
         button.addTarget(self,
@@ -108,7 +122,7 @@ private extension PracticeViewController {
     // 오토레이아웃 코드
     func setLayout() {
         [nameLabel, nameTextField,
-         presentButton, pushButton].forEach {
+         presentButton, pushButton, slider, toggle].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -116,6 +130,12 @@ private extension PracticeViewController {
         NSLayoutConstraint.activate([nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
                                      nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)])
+        
+        NSLayoutConstraint.activate([nameTextField.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20),
+                                     nameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+                                     nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+                                     nameTextField.heightAnchor.constraint(equalToConstant: 48)])
+        
         
         NSLayoutConstraint.activate([nameTextField.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20),
                                      nameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
@@ -131,6 +151,16 @@ private extension PracticeViewController {
                                      pushButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      pushButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      pushButton.heightAnchor.constraint(equalToConstant: 48)])
+        
+        NSLayoutConstraint.activate([slider.topAnchor.constraint(equalTo: pushButton.bottomAnchor, constant: 20),
+                                     slider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+                                     slider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+                                     slider.heightAnchor.constraint(equalToConstant: 48)])
+        
+        NSLayoutConstraint.activate([toggle.topAnchor.constraint(equalTo: slider.bottomAnchor, constant: 20),
+                                     toggle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+                                     toggle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+                                     toggle.heightAnchor.constraint(equalToConstant: 48)])
     }
 }
 
