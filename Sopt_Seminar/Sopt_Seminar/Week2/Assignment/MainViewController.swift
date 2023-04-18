@@ -43,4 +43,15 @@ class MainViewController: UIViewController {
         pwTextField.clearButtonMode = .whileEditing
         return pwTextField
     }()
+    
+    // 5. 로그인하기 버튼
+    private let loginButton: UIButton = {
+        let loginButton = UIButton()
+        loginButton.setTitle("로그인하기", for: .normal)
+        loginButton.layer.borderColor = UIColor(named: "tappedBorder")?.cgColor
+        loginButton.backgroundColor = UIColor.black
+        return loginButton
+    }()
+    
+    
 }
