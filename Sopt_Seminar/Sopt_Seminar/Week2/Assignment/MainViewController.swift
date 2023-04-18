@@ -31,6 +31,16 @@ class MainViewController: UIViewController {
     private let idTextField: UITextField = {
         let idTextField = UITextField()
         idTextField.placeholder = "아이디"
-        
+        idTextField.backgroundColor = UIColor(named: "textFieldbackground")
+        return idTextField
+    }()
+    
+    // 4. Password TextField
+    private let pwTextField: UITextField = {
+        let pwTextField = UITextField()
+        pwTextField.placeholder = "비밀번호"
+        pwTextField.backgroundColor = UIColor(named: "textFieldbackground")
+        pwTextField.clearButtonMode = .whileEditing
+        return pwTextField
     }()
 }
