@@ -6,3 +6,31 @@
 //
 
 import Foundation
+import SnapKit
+import UIKit
+
+class MainViewController: UIViewController {
+    // 아이디, 비밀번호
+    var id: String = ""
+    var pw: String = ""
+    
+    // 1. Shevron SF Symbols (UIImage)
+    private let shevron = UIImage(systemName: "chevron.backward")
+    
+    // 2. TVING ID 로그인 문구
+    private let guideLabel: UILabel = {
+        let guideLabel = UILabel()
+        guideLabel.text = "TVING ID 로그인"
+        guideLabel.font = .systemFont(ofSize: 24)
+        guideLabel.textColor = .white
+        guideLabel.textAlignment = .center
+        return guideLabel
+    }()
+    
+    // 3. ID TextField
+    private let idTextField: UITextField = {
+        let idTextField = UITextField()
+        idTextField.placeholder = "아이디"
+        
+    }()
+}
