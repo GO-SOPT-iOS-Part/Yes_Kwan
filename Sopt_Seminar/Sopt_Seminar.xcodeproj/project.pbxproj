@@ -72,6 +72,7 @@
 		F4064F7229E133E3006BB626 /* Week2 */ = {
 			isa = PBXGroup;
 			children = (
+				F4289C5029EE639F0045BEC8 /* Assignment */,
 				F4064F8929E1482E006BB626 /* Example */,
 				F4064F7B29E13854006BB626 /* Closure */,
 				F4064F7929E13748006BB626 /* DelegatePattern */,
@@ -113,6 +114,13 @@
 				F4064F8D29E14988006BB626 /* SecondViewController_Ex1.swift */,
 			);
 			path = Example_1;
+			sourceTree = "<group>";
+		};
+		F4289C5029EE639F0045BEC8 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assignment;
 			sourceTree = "<group>";
 		};
 		F44B4E2229D7FA29003658CD = {
