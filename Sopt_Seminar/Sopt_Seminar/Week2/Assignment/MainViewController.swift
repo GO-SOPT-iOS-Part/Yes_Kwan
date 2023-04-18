@@ -53,5 +53,41 @@ class MainViewController: UIViewController {
         return loginButton
     }()
     
+    // 6. 아이디 찾기 label
+    private let idLabel: UILabel = {
+        let idLabel = UILabel()
+        idLabel.text = "아이디 찾기  "
+        idLabel.font = .systemFont(ofSize: 12)
+        idLabel.textColor = UIColor(named: "textColor")
+        return idLabel
+    }()
     
+    // 7. 구분선
+    private let lindLabel: UILabel = {
+        let lindLabel = UILabel()
+        lindLabel.text = "|"
+        lindLabel.font = .systemFont(ofSize: 12)
+        lindLabel.textColor = UIColor(named: "textFieldbackground")
+        return lindLabel
+    }()
+    
+    // 8. 비밀번호 찾기 label
+    private let pwLabel: UILabel = {
+        let pwLabel = UILabel()
+        pwLabel.text = "   비밀번호 찾기"
+        pwLabel.font = .systemFont(ofSize: 12)
+        pwLabel.textColor = UIColor(named: "textColor")
+        return pwLabel
+    }()
+    
+    // 9. 아직 계정이 없으신가요?
+    private let questionLabel: UILabel = {
+        let questionLabel = UILabel()
+        questionLabel.text = "아직 계정이 없으신가요?"
+        questionLabel.font = .systemFont(ofSize: 10)
+        questionLabel.textColor = UIColor(named: "textFieldbackground")
+        return questionLabel
+    }()
+    
+
 }
