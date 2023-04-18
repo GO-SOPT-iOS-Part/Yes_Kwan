@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
         button.backgroundColor = UIColor.black
         button.layer.borderWidth = 0.7
         button.layer.borderColor = UIColor(named: "darkest")?.cgColor
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         button.layer.cornerRadius = 5
         return button
     }()
