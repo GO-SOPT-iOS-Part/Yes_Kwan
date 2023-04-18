@@ -14,80 +14,197 @@ class MainViewController: UIViewController {
     var id: String = ""
     var pw: String = ""
     
-    // 1. Shevron SF Symbols (UIImage)
-    private let shevron = UIImage(systemName: "chevron.backward")
-    
     // 2. TVING ID 로그인 문구
     private let guideLabel: UILabel = {
-        let guideLabel = UILabel()
-        guideLabel.text = "TVING ID 로그인"
-        guideLabel.font = .systemFont(ofSize: 24)
-        guideLabel.textColor = .white
-        guideLabel.textAlignment = .center
-        return guideLabel
+        let label = UILabel()
+        label.text = "TVING ID 로그인"
+        label.font = .systemFont(ofSize: 24)
+        label.textColor = .white
+        label.textAlignment = .center
+        return label
     }()
     
     // 3. ID TextField
     private let idTextField: UITextField = {
-        let idTextField = UITextField()
-        idTextField.placeholder = "아이디"
-        idTextField.backgroundColor = UIColor(named: "textFieldbackground")
-        return idTextField
+        let textField = UITextField()
+        textField.placeholder = "아이디"
+        textField.textColor = UIColor(named: "textColor")
+        textField.backgroundColor = UIColor(named: "darkest")
+        textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
+        textField.addLeftPadding()
+        return textField
     }()
     
     // 4. Password TextField
     private let pwTextField: UITextField = {
-        let pwTextField = UITextField()
-        pwTextField.placeholder = "비밀번호"
-        pwTextField.backgroundColor = UIColor(named: "textFieldbackground")
-        pwTextField.clearButtonMode = .whileEditing
-        return pwTextField
+        let textField = UITextField()
+        textField.placeholder = "비밀번호"
+        textField.textColor = UIColor(named: "textColor")
+        textField.backgroundColor = UIColor(named: "darkest")
+        textField.clearButtonMode = .whileEditing
+        textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
+        textField.addLeftPadding()
+        return textField
     }()
     
     // 5. 로그인하기 버튼
-    private let loginButton: UIButton = {
-        let loginButton = UIButton()
-        loginButton.setTitle("로그인하기", for: .normal)
-        loginButton.layer.borderColor = UIColor(named: "tappedBorder")?.cgColor
-        loginButton.backgroundColor = UIColor.black
-        return loginButton
+    private lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("로그인하기", for: .normal)
+        button.backgroundColor = UIColor.black
+        button.layer.borderWidth = 0.7
+        button.layer.borderColor = UIColor(named: "darkest")?.cgColor
+        button.layer.cornerRadius = 5
+        return button
     }()
     
     // 6. 아이디 찾기 label
     private let idLabel: UILabel = {
-        let idLabel = UILabel()
-        idLabel.text = "아이디 찾기  "
-        idLabel.font = .systemFont(ofSize: 12)
-        idLabel.textColor = UIColor(named: "textColor")
-        return idLabel
+        let label = UILabel()
+        label.text = "아이디 찾기  "
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = UIColor(named: "textColor")
+        return label
     }()
     
     // 7. 구분선
     private let lindLabel: UILabel = {
-        let lindLabel = UILabel()
-        lindLabel.text = "|"
-        lindLabel.font = .systemFont(ofSize: 12)
-        lindLabel.textColor = UIColor(named: "textFieldbackground")
-        return lindLabel
+        let label = UILabel()
+        label.text = "|"
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = UIColor(named: "textFieldbackground")
+        return label
     }()
     
     // 8. 비밀번호 찾기 label
     private let pwLabel: UILabel = {
-        let pwLabel = UILabel()
-        pwLabel.text = "   비밀번호 찾기"
-        pwLabel.font = .systemFont(ofSize: 12)
-        pwLabel.textColor = UIColor(named: "textColor")
-        return pwLabel
+        let label = UILabel()
+        label.text = "   비밀번호 찾기"
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = UIColor(named: "textColor")
+        return label
     }()
     
     // 9. 아직 계정이 없으신가요?
     private let questionLabel: UILabel = {
-        let questionLabel = UILabel()
-        questionLabel.text = "아직 계정이 없으신가요?"
-        questionLabel.font = .systemFont(ofSize: 10)
-        questionLabel.textColor = UIColor(named: "textFieldbackground")
-        return questionLabel
+        let label = UILabel()
+        label.text = "아직 계정이 없으신가요?"
+        label.font = .systemFont(ofSize: 13)
+        label.textColor = UIColor(named: "textFieldbackground")
+        return label
     }()
     
+    // 10. 닉네임 만들러가기 버튼
+    private lazy var nickNameButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("닉네임 만들러가기", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 13)
+        button.setTitleColor(UIColor(named: "tappedBorder"), for: .normal)
+        button.setUnderline()
+        return button
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        style()
+        setLayOut()
+    }
+}
 
+// 버튼에 밑줄을 추가해주는 함수 추가정의
+extension UIButton {
+    @objc
+    func setUnderline() {
+        guard let title = title(for: .normal) else { return }
+        let attributedString = NSMutableAttributedString(string: title)
+        attributedString.addAttribute(.underlineStyle,
+                                      value: NSUnderlineStyle.single.rawValue,
+                                      range: NSRange(location: 0, length: title.count)
+        )
+        setAttributedTitle(attributedString, for: .normal)
+    }
+}
+
+extension UITextField {
+    func setPlaceholder(color: UIColor) {
+        guard let string = self.placeholder else {
+            return
+        }
+        attributedPlaceholder = NSAttributedString(string: string, attributes: [.foregroundColor: color])
+    }
+    
+    func addLeftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
+    }
+}
+
+
+
+private extension MainViewController {
+    
+    // 뷰의 배경색을 지정해준다
+    func style() {
+        view.backgroundColor = .black
+    }
+    
+    // 오토레이아웃 지정
+    func setLayOut() {
+        
+        [guideLabel, idTextField, pwTextField, loginButton, idLabel, lindLabel, pwLabel, questionLabel, nickNameButton].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
+        
+        NSLayoutConstraint.activate([guideLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lindLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
+        
+        guideLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(130)
+        }
+        
+        idTextField.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.top.equalTo(guideLabel.snp.bottom).offset(30)
+            $0.height.equalTo(55)
+        }
+        
+        pwTextField.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.top.equalTo(idTextField.snp.bottom).offset(10)
+            $0.height.equalTo(55)
+        }
+        
+        loginButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.top.equalTo(pwTextField.snp.bottom).offset(17)
+            $0.height.equalTo(55)
+        }
+        
+        idLabel.snp.makeConstraints {
+            $0.trailing.equalTo(lindLabel.snp.leading).offset(-20)
+            $0.top.equalTo(loginButton.snp.bottom).offset(25)
+        }
+        
+        lindLabel.snp.makeConstraints {
+            $0.top.equalTo(loginButton.snp.bottom).offset(25)
+        }
+        
+        pwLabel.snp.makeConstraints {
+            $0.leading.equalTo(lindLabel.snp.trailing).offset(20)
+            $0.top.equalTo(loginButton.snp.bottom).offset(25)
+        }
+        
+        questionLabel.snp.makeConstraints {
+            $0.top.equalTo(idLabel.snp.bottom).offset(25)
+            $0.leading.equalToSuperview().inset(35)
+        }
+        
+        nickNameButton.snp.makeConstraints {
+            $0.top.equalTo(idLabel.snp.bottom).offset(25)
+            $0.trailing.equalToSuperview().inset(35)
+        }
+        
+    }
 }
