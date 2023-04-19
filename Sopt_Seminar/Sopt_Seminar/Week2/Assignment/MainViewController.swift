@@ -159,15 +159,17 @@ private extension MainViewController {
         }
         
         NSLayoutConstraint.activate([guideLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            lindLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
+            lindLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            questionLabel.centerXAnchor.constraint(equalTo: idLabel.centerXAnchor),
+            nickNameButton.centerYAnchor.constraint(equalTo: questionLabel.centerYAnchor)])
         
         guideLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(130)
+            $0.top.equalToSuperview().offset(135)
         }
         
         idTextField.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(15)
-            $0.top.equalTo(guideLabel.snp.bottom).offset(30)
+            $0.top.equalTo(guideLabel.snp.bottom).offset(35)
             $0.height.equalTo(55)
         }
         
@@ -179,12 +181,12 @@ private extension MainViewController {
         
         loginButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(15)
-            $0.top.equalTo(pwTextField.snp.bottom).offset(17)
+            $0.top.equalTo(pwTextField.snp.bottom).offset(20)
             $0.height.equalTo(55)
         }
         
         idLabel.snp.makeConstraints {
-            $0.trailing.equalTo(lindLabel.snp.leading).offset(-20)
+            $0.trailing.equalTo(lindLabel.snp.leading).offset(-40)
             $0.top.equalTo(loginButton.snp.bottom).offset(25)
         }
         
@@ -193,18 +195,17 @@ private extension MainViewController {
         }
         
         pwLabel.snp.makeConstraints {
-            $0.leading.equalTo(lindLabel.snp.trailing).offset(20)
+            $0.leading.equalTo(lindLabel.snp.trailing).offset(40)
             $0.top.equalTo(loginButton.snp.bottom).offset(25)
         }
         
         questionLabel.snp.makeConstraints {
-            $0.top.equalTo(idLabel.snp.bottom).offset(25)
-            $0.leading.equalToSuperview().inset(35)
+            $0.top.equalTo(idLabel.snp.bottom).offset(30)
         }
         
         nickNameButton.snp.makeConstraints {
-            $0.top.equalTo(idLabel.snp.bottom).offset(25)
-            $0.trailing.equalToSuperview().inset(35)
+            $0.top.equalTo(pwLabel.snp.bottom).offset(30)
+            $0.leading.equalTo(pwLabel.snp.leading)
         }
         
     }
