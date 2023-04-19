@@ -31,6 +31,15 @@ extension UITextField {
         self.rightViewMode = ViewMode.whileEditing
     }
     
+    // textfield security toggle에 따른 눈깔버튼 이미지 변경 함수
+    func selectImg(_ button: UIButton) {
+        if self.isSecureTextEntry {
+            button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        } else {
+            button.setImage(UIImage(systemName: "eye"), for: .normal)
+        }
+    }
+    
     // textfield 내부 버튼 생성/배치
     func textFieldBtn(_ flag: Int) {
         // 1. clear button -> 커스텀 타입으로 지정
@@ -47,13 +56,23 @@ extension UITextField {
         // flag가 1 -> 비밀번호 텍스트필드
         // flag가 1이아님 -> 아이디 텍스트필드
         if flag == 1 {
-            // 2. eye button -> 커스텀 타입으로 지정
-            let eye = UIImage(systemName: "eye")
+            // 2. eye button -> 커스텀 타입으로 지정, seurity 적용 여부에 따른 초기 버튼 이미지를 설정함
+            var img: String = {
+                if self.isSecureTextEntry {
+                    return "eye.slash"
+                } else {
+                    return "eye"
+                }
+            }()
+            
             let securityButton = UIButton(type: .custom)
-            securityButton.setImage(eye, for: .normal)
+            let images = UIImage(systemName: img)
+            
+            securityButton.setImage(images, for: .normal)
             securityButton.tintColor = UIColor(named: "textColor")
             securityButton.contentMode = .scaleAspectFit
             securityButton.frame = CGRect(x: 40, y: 0, width: 45, height: 50)
+            securityButton.addTarget(self, action: #selector(self.toggleSecurity), for: .touchUpInside)
             
             // 3. 버튼들을 담을 rightView 생성 및 버튼들 추가
             let container = UIView(frame: CGRect(x: 0, y: 0, width: 90, height: 50))
@@ -79,8 +98,16 @@ extension UITextField {
     }
     
     // textfield 상의 text를 clear 해주는 메서드
-    @objc func clear(sender : AnyObject) {
+    @objc
+    func clear(sender : AnyObject) {
         self.text = ""
         sendActions(for: .editingChanged)
+    }
+    
+    @objc
+    // 눈깔 버튼 누르면 비밀번호 security toggle 될 수 있게 해주는 메서드
+    func toggleSecurity(_ sender: UIButton) {
+        self.isSecureTextEntry.toggle()
+        selectImg(sender)
     }
 }
