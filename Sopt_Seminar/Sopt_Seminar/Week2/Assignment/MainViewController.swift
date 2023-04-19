@@ -49,7 +49,8 @@ class MainViewController: UIViewController {
         textField.placeholder = "비밀번호"
         textField.textColor = UIColor(named: "textColor")
         textField.backgroundColor = UIColor(named: "darkest")
-        textField.clearButtonMode = .whileEditing
+        textField.tintColor = UIColor(named: "textColor")
+        textField.textFieldBtn()
         textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
         textField.addLeftPadding()
         return textField
