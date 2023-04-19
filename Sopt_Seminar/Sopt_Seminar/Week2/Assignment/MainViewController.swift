@@ -14,6 +14,14 @@ class MainViewController: UIViewController {
     var id: String = ""
     var pw: String = ""
     
+    // 1. chevron backward SF Symbols
+    private let chevron: UIImageView = {
+        let img = UIImageView()
+        img.image = UIImage(systemName: "chevron.backward")
+        img.tintColor = UIColor.white
+        return img
+    }()
+    
     // 2. TVING ID 로그인 문구
     private let guideLabel: UILabel = {
         let label = UILabel()
@@ -153,7 +161,7 @@ private extension MainViewController {
     // 오토레이아웃 지정
     func setLayOut() {
         
-        [guideLabel, idTextField, pwTextField, loginButton, idLabel, lindLabel, pwLabel, questionLabel, nickNameButton].forEach {
+        [chevron, guideLabel, idTextField, pwTextField, loginButton, idLabel, lindLabel, pwLabel, questionLabel, nickNameButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -163,8 +171,15 @@ private extension MainViewController {
             questionLabel.centerXAnchor.constraint(equalTo: idLabel.centerXAnchor),
             nickNameButton.centerYAnchor.constraint(equalTo: questionLabel.centerYAnchor)])
         
+        chevron.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(15)
+            $0.top.equalToSuperview().offset(100)
+            $0.height.equalTo(24)
+            $0.width.equalTo(15)
+        }
+        
         guideLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(135)
+            $0.top.equalTo(chevron.snp.top).offset(35)
         }
         
         idTextField.snp.makeConstraints {
