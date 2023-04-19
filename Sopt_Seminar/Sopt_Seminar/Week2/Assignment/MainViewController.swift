@@ -10,7 +10,7 @@ import SnapKit
 import UIKit
 
 class MainViewController: UIViewController {
-    // 아이디, 비밀번호
+    // 아이디, 비밀번호를 담는 변수
     var id: String = ""
     var pw: String = ""
     
@@ -120,37 +120,6 @@ class MainViewController: UIViewController {
     }
 }
 
-// 버튼에 밑줄을 추가해주는 함수 추가정의
-extension UIButton {
-    @objc
-    func setUnderline() {
-        guard let title = title(for: .normal) else { return }
-        let attributedString = NSMutableAttributedString(string: title)
-        attributedString.addAttribute(.underlineStyle,
-                                      value: NSUnderlineStyle.single.rawValue,
-                                      range: NSRange(location: 0, length: title.count)
-        )
-        setAttributedTitle(attributedString, for: .normal)
-    }
-}
-
-extension UITextField {
-    func setPlaceholder(color: UIColor) {
-        guard let string = self.placeholder else {
-            return
-        }
-        attributedPlaceholder = NSAttributedString(string: string, attributes: [.foregroundColor: color])
-    }
-    
-    func addLeftPadding() {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
-        self.leftView = paddingView
-        self.leftViewMode = ViewMode.always
-    }
-}
-
-
-
 private extension MainViewController {
     
     // 뷰의 배경색을 지정해준다
@@ -222,6 +191,5 @@ private extension MainViewController {
             $0.top.equalTo(pwLabel.snp.bottom).offset(30)
             $0.leading.equalTo(pwLabel.snp.leading)
         }
-        
     }
 }

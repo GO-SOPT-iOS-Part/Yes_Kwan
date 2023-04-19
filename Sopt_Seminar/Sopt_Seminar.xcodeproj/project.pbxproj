@@ -25,6 +25,8 @@
 		F44B4E3B29D7FA2A003658CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E3929D7FA2A003658CD /* LaunchScreen.storyboard */; };
 		F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4229D806BC003658CD /* PracticeViewController.swift */; };
 		F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */; };
+		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
+		F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863429EFB743002E2A61 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		F44B4E3C29D7FA2A003658CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44B4E4229D806BC003658CD /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController2.swift; sourceTree = "<group>"; };
+		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		F4F7863429EFB743002E2A61 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F4F7863129EFB641002E2A61 /* Extensions */,
 				F4289C5129EE70A60045BEC8 /* MainViewController.swift */,
 			);
 			path = Assignment;
@@ -154,6 +159,15 @@
 				F44B4E3C29D7FA2A003658CD /* Info.plist */,
 			);
 			path = Sopt_Seminar;
+			sourceTree = "<group>";
+		};
+		F4F7863129EFB641002E2A61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4F7863229EFB652002E2A61 /* UIButton+.swift */,
+				F4F7863429EFB743002E2A61 /* UITextField+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */,
+				F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */,
 				F4289C5229EE70A60045BEC8 /* MainViewController.swift in Sources */,
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
 				F4064F7F29E1387D006BB626 /* SecondViewController_Closure.swift in Sources */,
+				F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */,
 				F4064F7829E13543006BB626 /* DataBindProtocol.swift in Sources */,
 				F4064F7D29E13873006BB626 /* FirstViewController_Closure.swift in Sources */,
 				F4064F7429E1340D006BB626 /* FirstViewController_DelegatePtn.swift in Sources */,
