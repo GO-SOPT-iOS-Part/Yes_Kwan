@@ -38,6 +38,7 @@ class MainViewController: UIViewController {
         textField.placeholder = "아이디"
         textField.textColor = UIColor(named: "textColor")
         textField.backgroundColor = UIColor(named: "darkest")
+        textField.textFieldBtn(0)
         textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
         textField.addLeftPadding()
         return textField
@@ -50,7 +51,7 @@ class MainViewController: UIViewController {
         textField.textColor = UIColor(named: "textColor")
         textField.backgroundColor = UIColor(named: "darkest")
         textField.tintColor = UIColor(named: "textColor")
-        textField.textFieldBtn()
+        textField.textFieldBtn(1)
         textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
         textField.addLeftPadding()
         return textField
