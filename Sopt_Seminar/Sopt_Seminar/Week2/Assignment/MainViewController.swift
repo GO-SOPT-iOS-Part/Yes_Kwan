@@ -154,8 +154,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         if email.isValidEmail() && password.count >= 8 {
             loginButton.backgroundColor = UIColor.red
+            loginButton.isEnabled = true
         } else {
             loginButton.backgroundColor = UIColor.black
+            loginButton.isEnabled = false
         }
     }
 }
