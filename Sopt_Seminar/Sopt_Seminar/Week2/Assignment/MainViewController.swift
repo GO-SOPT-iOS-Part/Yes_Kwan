@@ -42,12 +42,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         textField.addLeftPadding()
         textField.textFieldBtn(0)
         textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
         return textField
     }()
     
     // 4. Password TextField
     private let pwTextField: UITextField = {
         let textField = UITextField()
+        textField.isSecureTextEntry = true
         textField.placeholder = "비밀번호"
         textField.textColor = UIColor(named: "textColor")
         textField.backgroundColor = UIColor(named: "darkest")
@@ -56,6 +58,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         textField.addLeftPadding()
         textField.textFieldBtn(1)
         textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
         return textField
     }()
     
