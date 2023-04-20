@@ -22,8 +22,11 @@ extension UIButton {
     }
     
     @objc
-    func buttonBackground(_ button: UIButton, _ id: String, _ pw: String) {
-        
-        button.backgroundColor = UIColor.red
+    func buttonBackground(id: String, pw: String) {
+        if id.isValidEmail() && pw.count >= 8 {
+            self.backgroundColor = UIColor.red
+        } else {
+            self.backgroundColor = UIColor(named: "darkest")
+        }
     }
 }

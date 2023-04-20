@@ -126,9 +126,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         idTextField.delegate = self
         idTextField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .touchDown)
+        idTextField.addTarget(self, action: #selector(loginbtnActivate), for: .allEditingEvents)
         
         pwTextField.delegate = self
         pwTextField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .touchDown)
+        pwTextField.addTarget(self, action: #selector(loginbtnActivate), for: .allEditingEvents)
     }
     
     @objc
@@ -143,9 +145,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         textField.layer.borderWidth = 0.0
     }
     
-    @objc
-    func buttonBackground(_ button: UIButton) {
-        button.backgroundColor = UIColor.red
+    @objc func loginbtnActivate() {
+        guard let email = idTextField.text else { return }
+        guard let password = pwTextField.text else { return }
+        
+        if email.isValidEmail() && password.count >= 8 {
+            loginButton.backgroundColor = UIColor.red
+        } else {
+            loginButton.backgroundColor = UIColor.black
+        }
     }
 }
 
