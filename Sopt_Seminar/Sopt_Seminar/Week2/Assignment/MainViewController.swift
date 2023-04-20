@@ -10,9 +10,9 @@ import SnapKit
 import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
-    // 아이디, 비밀번호를 담는 변수
-    var id: String = ""
-    var pw: String = ""
+    
+    typealias sendEmail = ((String) -> (Void))
+    var completionHandler: sendEmail?
     
     // 1. chevron backward SF Symbols
     private let chevron: UIImageView = {
@@ -155,6 +155,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         if email.isValidEmail() && password.count >= 8 {
             loginButton.backgroundColor = UIColor.red
             loginButton.isEnabled = true
+            loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         } else {
             loginButton.backgroundColor = UIColor.black
             loginButton.isEnabled = false
@@ -235,5 +236,16 @@ private extension MainViewController {
         }
     }
     
+    @objc
+    func login() {
+        let loginSuccessViewController = LoginSuccessViewController()
+        
+        // 입력된 이메일 값 받아오고, completionHandler 클로저를 통해 데이터 전달
+        guard let mails = idTextField.text else { return }
+        completionHandler?(mails)
+        
+        // 화면이동
+        self.navigationController?.pushViewController(loginSuccessViewController, animated: true)
+    }
     
 }
