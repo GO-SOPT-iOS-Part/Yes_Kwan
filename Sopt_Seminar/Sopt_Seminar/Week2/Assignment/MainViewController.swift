@@ -11,9 +11,6 @@ import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     
-    typealias sendEmail = ((String) -> (Void))
-    var completionHandler: sendEmail?
-    
     // 1. chevron backward SF Symbols
     private let chevron: UIImageView = {
         let img = UIImageView()
@@ -242,10 +239,9 @@ private extension MainViewController {
         
         // 입력된 이메일 값 받아오고, completionHandler 클로저를 통해 데이터 전달
         guard let mails = idTextField.text else { return }
-        completionHandler?(mails)
+        loginSuccessViewController.userEmail = mails + " 님"
         
         // 화면이동
         self.navigationController?.pushViewController(loginSuccessViewController, animated: true)
     }
-    
 }

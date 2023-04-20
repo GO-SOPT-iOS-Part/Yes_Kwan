@@ -11,6 +11,8 @@ import SnapKit
 
 class LoginSuccessViewController: UIViewController {
     
+    var userEmail: String = ""
+    
     // 1. TVING image
     private let logoImg: UIImageView = {
         let logo = UIImageView()
@@ -21,7 +23,6 @@ class LoginSuccessViewController: UIViewController {
     // 2. 로그인 시 얻은 이메일 문자열 가져와서 보여주는 label
     private let emailLabel: UILabel = {
         let email = UILabel()
-        email.text = "님"
         email.font = .systemFont(ofSize: 18, weight: UIFont.Weight(rawValue: 3.0))
         email.textColor = .white
         return email
@@ -51,8 +52,12 @@ class LoginSuccessViewController: UIViewController {
         super.viewDidLoad()
         style()
         layOut()
+        nameBind()
     }
     
+    func nameBind() {
+        emailLabel.text = userEmail
+    }
 }
 
 private extension LoginSuccessViewController {
