@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIImage {
+    // 이미지 사이즈 조정 함수 (feat. 지희 꿀코드)
     func resized(withPercentage percentage: CGFloat) -> UIImage? {
         let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
         UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)

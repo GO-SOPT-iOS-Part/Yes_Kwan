@@ -10,6 +10,8 @@ import UIKit
 
 // 버튼에 밑줄을 추가해주는 함수 추가정의
 extension UIButton {
+    
+    // 버튼에 밑줄 추가해주는 함수
     @objc
     func setUnderline() {
         guard let title = title(for: .normal) else { return }
@@ -21,6 +23,7 @@ extension UIButton {
         setAttributedTitle(attributedString, for: .normal)
     }
     
+    // 정규식과 비밀번호 길이에 따른 버튼 배경색 설정 함수
     @objc
     func buttonBackground(id: String, pw: String) {
         if id.isValidEmail() && pw.count >= 8 {

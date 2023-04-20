@@ -11,6 +11,7 @@ import SnapKit
 
 class LoginSuccessViewController: UIViewController {
     
+    // 로그인하기 버튼을 통해 전달된 이메일을 받을 변수
     var userEmail: String = ""
     
     // 1. TVING image
@@ -55,6 +56,7 @@ class LoginSuccessViewController: UIViewController {
         nameBind()
     }
     
+    // 5. 데이터 바인딩 함수
     func nameBind() {
         emailLabel.text = userEmail
     }

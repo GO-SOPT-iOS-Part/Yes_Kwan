@@ -122,7 +122,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         style()
         setLayOut()
         
+        // 비밀번호 텍스트필드 눈깔버튼에 따른 뷰 변화 반영시키기
         pwTextField.textFieldBtn(1)
+        
+        
+        // UITextFieldDelegate 프로토콜을 채택 및 idTextField/pwTextField의 역할 위임받기
+        // 1. TextField가 터치되었을때 테두리 색상/두께 변경 함수반영
+        // 2. 정규식/비밀번호길이 조건충족여부에 따른 로그인버튼 backgroundColor 반영을 위한 함수반영
         
         idTextField.delegate = self
         idTextField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .touchDown)
@@ -133,6 +139,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         pwTextField.addTarget(self, action: #selector(loginbtnActivate), for: .allEditingEvents)
     }
     
+    
+    // UITextFieldDelegate에서 가져온 함수들
+    // textField가 편집시작이 되었을때 동작 정의 --> touchDown 이벤트 발생 시의 view 동작 정의
     @objc
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor(named: "textColor")?.cgColor
@@ -140,11 +149,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         textField.layer.cornerRadius = 5
     }
     
+    // textField 편집이 끝났을 때 동작 정의 --> textfield에 대한 focus가 사라지면서 편집 종료 --> 원래 테두리로 돌아오기
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.clear.cgColor
         textField.layer.borderWidth = 0.0
     }
     
+    
+    // 로그인 버튼 활성화 조건을 다룬 함수
     @objc func loginbtnActivate() {
         guard let email = idTextField.text else { return }
         guard let password = pwTextField.text else { return }
@@ -233,6 +245,7 @@ private extension MainViewController {
         }
     }
     
+    // 로그인버튼 터치 시에 화면전환 + 데이터전달되게끔 해주는 함수
     @objc
     func login() {
         let loginSuccessViewController = LoginSuccessViewController()
