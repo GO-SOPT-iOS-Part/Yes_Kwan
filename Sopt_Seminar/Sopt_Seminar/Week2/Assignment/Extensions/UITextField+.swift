@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UITextField {
+extension UITextField: UITextFieldDelegate {
     // Placeholder color set
     func setPlaceholder(color: UIColor) {
         guard let string = self.placeholder else {
@@ -57,7 +57,7 @@ extension UITextField {
         // flag가 1이아님 -> 아이디 텍스트필드
         if flag == 1 {
             // 2. eye button -> 커스텀 타입으로 지정, seurity 적용 여부에 따른 초기 버튼 이미지를 설정함
-            var img: String = {
+            let img: String = {
                 if self.isSecureTextEntry {
                     return "eye.slash"
                 } else {

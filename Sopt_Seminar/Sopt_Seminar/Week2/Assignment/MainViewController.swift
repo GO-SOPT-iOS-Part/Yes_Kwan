@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
     // 아이디, 비밀번호를 담는 변수
     var id: String = ""
     var pw: String = ""
@@ -41,6 +41,7 @@ class MainViewController: UIViewController {
         textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
         textField.addLeftPadding()
         textField.textFieldBtn(0)
+        textField.borderStyle = .roundedRect
         return textField
     }()
     
@@ -54,6 +55,7 @@ class MainViewController: UIViewController {
         textField.setPlaceholder(color: UIColor(named: "textColor") ?? .white)
         textField.addLeftPadding()
         textField.textFieldBtn(1)
+        textField.borderStyle = .roundedRect
         return textField
     }()
     
@@ -119,7 +121,26 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         style()
         setLayOut()
+        
         pwTextField.textFieldBtn(1)
+        
+        idTextField.delegate = self
+        idTextField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .touchDown)
+        
+        pwTextField.delegate = self
+        pwTextField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .touchDown)
+    }
+    
+    @objc
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor(named: "textColor")?.cgColor
+        textField.layer.borderWidth = 2.0
+        textField.layer.cornerRadius = 5
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.borderWidth = 0.0
     }
 }
 
