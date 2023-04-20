@@ -28,6 +28,7 @@
 		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
 		F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863429EFB743002E2A61 /* UITextField+.swift */; };
 		F4F7863729F10F94002E2A61 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863629F10F94002E2A61 /* String+.swift */; };
+		F4F7863929F118E3002E2A61 /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		F4F7863429EFB743002E2A61 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		F4F7863629F10F94002E2A61 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				F4F7863129EFB641002E2A61 /* Extensions */,
 				F4289C5129EE70A60045BEC8 /* MainViewController.swift */,
+				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */,
 				F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */,
 				F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */,
+				F4F7863929F118E3002E2A61 /* LoginSuccessViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
