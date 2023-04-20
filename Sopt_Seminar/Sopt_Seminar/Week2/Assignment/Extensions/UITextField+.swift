@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UITextField: UITextFieldDelegate {
+extension UITextField {
     // Placeholder color set
     func setPlaceholder(color: UIColor) {
         guard let string = self.placeholder else {

@@ -20,4 +20,10 @@ extension UIButton {
         )
         setAttributedTitle(attributedString, for: .normal)
     }
+    
+    @objc
+    func buttonBackground(_ button: UIButton, _ id: String, _ pw: String) {
+        
+        button.backgroundColor = UIColor.red
+    }
 }

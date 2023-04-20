@@ -142,6 +142,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         textField.layer.borderColor = UIColor.clear.cgColor
         textField.layer.borderWidth = 0.0
     }
+    
+    @objc
+    func buttonBackground(_ button: UIButton) {
+        button.backgroundColor = UIColor.red
+    }
 }
 
 private extension MainViewController {
@@ -216,4 +221,6 @@ private extension MainViewController {
             $0.leading.equalTo(pwLabel.snp.leading)
         }
     }
+    
+    
 }

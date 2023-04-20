@@ -27,6 +27,7 @@
 		F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */; };
 		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
 		F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863429EFB743002E2A61 /* UITextField+.swift */; };
+		F4F7863729F10F94002E2A61 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863629F10F94002E2A61 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController2.swift; sourceTree = "<group>"; };
 		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		F4F7863429EFB743002E2A61 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		F4F7863629F10F94002E2A61 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				F4F7863229EFB652002E2A61 /* UIButton+.swift */,
 				F4F7863429EFB743002E2A61 /* UITextField+.swift */,
+				F4F7863629F10F94002E2A61 /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				F4064F7829E13543006BB626 /* DataBindProtocol.swift in Sources */,
 				F4064F7D29E13873006BB626 /* FirstViewController_Closure.swift in Sources */,
 				F4064F7429E1340D006BB626 /* FirstViewController_DelegatePtn.swift in Sources */,
+				F4F7863729F10F94002E2A61 /* String+.swift in Sources */,
 				F44B4E2F29D7FA29003658CD /* AppDelegate.swift in Sources */,
 				F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */,
 				F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */,
