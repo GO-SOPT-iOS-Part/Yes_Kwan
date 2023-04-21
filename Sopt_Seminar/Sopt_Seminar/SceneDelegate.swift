@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Inject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,9 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 guard let windowScene = (scene as? UIWindowScene) else { return }
             // 2.
                 self.window = UIWindow(windowScene: windowScene)
+        
+                //let injectViewController
+        
+        
             // 3.
             // 뷰 사이의 계층구조를 탐색하게 해주는 스택 형태의 Container ViewController
-                let navigationController = UINavigationController(rootViewController: PracticeViewController())
+                let navigationController = UINavigationController(rootViewController: MainViewController())
                 self.window?.rootViewController = navigationController
             // 4.
                 self.window?.makeKeyAndVisible()
