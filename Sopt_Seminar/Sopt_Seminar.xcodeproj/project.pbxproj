@@ -25,6 +25,7 @@
 		F44B4E3B29D7FA2A003658CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E3929D7FA2A003658CD /* LaunchScreen.storyboard */; };
 		F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4229D806BC003658CD /* PracticeViewController.swift */; };
 		F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */; };
+		F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470034D29F26AF80034E787 /* NicknameViewController.swift */; };
 		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
 		F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863429EFB743002E2A61 /* UITextField+.swift */; };
 		F4F7863729F10F94002E2A61 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863629F10F94002E2A61 /* String+.swift */; };
@@ -50,6 +51,7 @@
 		F44B4E3C29D7FA2A003658CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44B4E4229D806BC003658CD /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController2.swift; sourceTree = "<group>"; };
+		F470034D29F26AF80034E787 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		F4F7863429EFB743002E2A61 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		F4F7863629F10F94002E2A61 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				F4F7863129EFB641002E2A61 /* Extensions */,
 				F4289C5129EE70A60045BEC8 /* MainViewController.swift */,
 				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
+				F470034D29F26AF80034E787 /* NicknameViewController.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
 				F4064F7F29E1387D006BB626 /* SecondViewController_Closure.swift in Sources */,
+				F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */,
 				F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */,
 				F4064F7829E13543006BB626 /* DataBindProtocol.swift in Sources */,
 				F4064F7D29E13873006BB626 /* FirstViewController_Closure.swift in Sources */,
