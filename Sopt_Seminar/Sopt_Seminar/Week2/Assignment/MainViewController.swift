@@ -125,6 +125,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         // 비밀번호 텍스트필드 눈깔버튼에 따른 뷰 변화 반영시키기
         pwTextField.textFieldBtn(1)
         
+        nickNameButton.addTarget(self, action: #selector(presentModalViewController),
+                             for: .touchUpInside)
+        
         
         // UITextFieldDelegate 프로토콜을 채택 및 idTextField/pwTextField의 역할 위임받기
         // 1. TextField가 터치되었을때 테두리 색상/두께 변경 함수반영
@@ -256,5 +259,23 @@ private extension MainViewController {
         
         // 화면이동
         self.navigationController?.pushViewController(loginSuccessViewController, animated: true)
+    }
+    
+    // 화면 전환 코드
+    @objc func presentModalViewController() {
+        let sheetViewController = SheetViewController()
+        // 모달 스타일 지정
+//        sheetViewController.modalPresentationStyle = .overCurrentContext
+        
+        if let sheet = sheetViewController.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.selectedDetentIdentifier = .medium
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 32.0
+        }
+        
+        // 애니메이션 효과로 나타나게끔 설정
+        self.present(sheetViewController, animated: true)
     }
 }
