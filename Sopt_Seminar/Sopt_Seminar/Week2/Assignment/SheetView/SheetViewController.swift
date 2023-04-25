@@ -14,17 +14,17 @@ class SheetViewController: UIViewController {
     // 데이터전달에 사용될 클로저의 타입을 handler로 정의
     typealias handler = ((String) -> (Void))
     
+    // (String)->(Void) 타입의 클로저를 옵셔널 타입으로 정의한 변수 compHandler
     var compHandler: handler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layOut()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        saveBtn.addTarget(self, action: #selector(backToMain), for: .touchUpInside)
+        
+        // 닉네임 길이에 따른 버튼 활성화여부 반영되게함
+        
+        nickNameTextField.addTarget(self, action: #selector(saveNickNameActivate), for: .allEditingEvents)
     }
 
     // 1. 닉네임을 입력해주세요
@@ -49,11 +49,10 @@ class SheetViewController: UIViewController {
     // 3. 저장하기 버튼
     lazy var saveBtn: UIButton = {
         let saving = UIButton()
-        saving.backgroundColor = .red
         saving.setTitle("저장하기", for: .normal)
+        saving.backgroundColor = UIColor(named: "textColor")
         saving.setTitleColor(.white, for: .normal)
         saving.layer.cornerRadius = 10
-        saving.addTarget(self, action: #selector(backToMain), for: .touchUpInside)
         return saving
     }()
 }
@@ -104,5 +103,19 @@ extension SheetViewController {
         compHandler?(text)
         self.dismiss(animated: true)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    // 닉네임 저장하기 버튼 활성화 조건을 다룬 함수
+    @objc func saveNickNameActivate() {
+        guard let name = nickNameTextField.text else { return }
+        
+        if name.count >= 2 {
+            saveBtn.backgroundColor = UIColor.red
+            saveBtn.isEnabled = true
+            saveBtn.addTarget(self, action: #selector(backToMain), for: .touchUpInside)
+        } else {
+            saveBtn.backgroundColor = UIColor(named: "textColor")
+            saveBtn.isEnabled = false
+        }
     }
 }
