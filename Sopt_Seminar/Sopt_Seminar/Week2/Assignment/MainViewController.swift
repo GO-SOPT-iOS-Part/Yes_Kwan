@@ -11,6 +11,9 @@ import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     
+    // 0. 닉네임을 저장할 변수
+    var nickName: String?
+    
     // 1. chevron backward SF Symbols
     private let chevron: UIImageView = {
         let img = UIImageView()
@@ -252,11 +255,16 @@ private extension MainViewController {
     @objc
     func login() {
         let loginSuccessViewController = LoginSuccessViewController()
-        
-        // 입력된 이메일 값 받아오고, completionHandler 클로저를 통해 데이터 전달
-        guard let mails = idTextField.text else { return }
-        loginSuccessViewController.userEmail = mails + " 님"
-        
+
+        if nickName != "" {
+            guard let name = nickName else { return }
+            loginSuccessViewController.userEmail = name + " 님"
+        } else {
+            // 입력된 이메일 값 받아오고, completionHandler 클로저를 통해 데이터 전달
+            guard let mails = idTextField.text else { return }
+            loginSuccessViewController.userEmail = mails + " 님"
+        }
+
         // 화면이동
         self.navigationController?.pushViewController(loginSuccessViewController, animated: true)
     }
@@ -270,9 +278,14 @@ private extension MainViewController {
         if let sheet = sheetViewController.sheetPresentationController {
             sheet.detents = [.medium()]
             sheet.selectedDetentIdentifier = .medium
-            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.largestUndimmedDetentIdentifier = .large
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 32.0
+        }
+        
+        sheetViewController.compHandler = { [weak self] text in
+            guard let self else { return }
+            self.nickName = text
         }
         
         // 애니메이션 효과로 나타나게끔 설정

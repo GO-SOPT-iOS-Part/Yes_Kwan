@@ -11,10 +11,20 @@ import SnapKit
 // iOS 15버전 이상부터는 UISheetPresentationController에 접근하여 간편하게 Sheet Modal 구현이 가능함
 class SheetViewController: UIViewController {
     
+    // 데이터전달에 사용될 클로저의 타입을 handler로 정의
+    typealias handler = ((String) -> (Void))
+    
+    var compHandler: handler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layOut()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        saveBtn.addTarget(self, action: #selector(backToMain), for: .touchUpInside)
     }
 
     // 1. 닉네임을 입력해주세요
@@ -43,6 +53,7 @@ class SheetViewController: UIViewController {
         saving.setTitle("저장하기", for: .normal)
         saving.setTitleColor(.white, for: .normal)
         saving.layer.cornerRadius = 10
+        saving.addTarget(self, action: #selector(backToMain), for: .touchUpInside)
         return saving
     }()
 }
@@ -84,5 +95,14 @@ extension SheetViewController {
             $0.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(50)
         }
+    }
+    
+    // 닉네임 저장하기 버튼을 누르면 값이 전달되면서 sheet가 닫히게 하는 함수
+    @objc
+    func backToMain() {
+        guard let text = nickNameTextField.text else { return }
+        compHandler?(text)
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
