@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate {
+class LogInViewController: UIViewController, UITextFieldDelegate {
     
     // 0. 닉네임을 저장할 변수
     var nickName: String?
@@ -178,7 +178,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-private extension MainViewController {
+private extension LogInViewController {
     
     // 뷰의 배경색을 지정해준다
     func style() {

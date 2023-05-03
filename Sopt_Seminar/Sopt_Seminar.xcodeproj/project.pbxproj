@@ -17,7 +17,7 @@
 		F4064F8829E14277006BB626 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = F4064F8729E14277006BB626 /* Inject */; };
 		F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4064F8B29E1485C006BB626 /* FirstViewController_Ex1.swift */; };
 		F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4064F8D29E14988006BB626 /* SecondViewController_Ex1.swift */; };
-		F4289C5229EE70A60045BEC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4289C5129EE70A60045BEC8 /* MainViewController.swift */; };
+		F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4289C5129EE70A60045BEC8 /* LogInViewController.swift */; };
 		F44B4E2F29D7FA29003658CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E2E29D7FA29003658CD /* AppDelegate.swift */; };
 		F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E3029D7FA29003658CD /* SceneDelegate.swift */; };
 		F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E3229D7FA29003658CD /* ViewController.swift */; };
@@ -30,7 +30,6 @@
 		F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037C29F3A8EF0034E787 /* SecondViewController.swift */; };
 		F470037F29F3ABCC0034E787 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037E29F3ABCC0034E787 /* BaseViewController.swift */; };
 		F470038129F3ACCC0034E787 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038029F3ACCC0034E787 /* BaseView.swift */; };
-		F470038429F3B17B0034E787 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038329F3B17B0034E787 /* CarrotViewController.swift */; };
 		F470038629F3B1C60034E787 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038529F3B1C60034E787 /* Carrot.swift */; };
 		F470038829F3B2C00034E787 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038729F3B2C00034E787 /* CarrotTableViewCell.swift */; };
 		F470038A29F3B6DB0034E787 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038929F3B6DB0034E787 /* UIView + Extension.swift */; };
@@ -39,6 +38,7 @@
 		F470039329F3C00B0034E787 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039229F3C00B0034E787 /* PhotoViewController.swift */; };
 		F470039529F3C0470034E787 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039429F3C0470034E787 /* Photo.swift */; };
 		F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039629F3C0FF0034E787 /* PhotoCell.swift */; };
+		F49F47AA2A00BE25006379C7 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F47A92A00BE25006379C7 /* CarrotViewController.swift */; };
 		F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */; };
 		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
 		F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863429EFB743002E2A61 /* UITextField+.swift */; };
@@ -55,7 +55,7 @@
 		F4064F7E29E1387D006BB626 /* SecondViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_Closure.swift; sourceTree = "<group>"; };
 		F4064F8B29E1485C006BB626 /* FirstViewController_Ex1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_Ex1.swift; sourceTree = "<group>"; };
 		F4064F8D29E14988006BB626 /* SecondViewController_Ex1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_Ex1.swift; sourceTree = "<group>"; };
-		F4289C5129EE70A60045BEC8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F4289C5129EE70A60045BEC8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		F44B4E2B29D7FA29003658CD /* Sopt_Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Seminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B4E2E29D7FA29003658CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B4E3029D7FA29003658CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 		F470037C29F3A8EF0034E787 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F470037E29F3ABCC0034E787 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F470038029F3ACCC0034E787 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		F470038329F3B17B0034E787 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
 		F470038529F3B1C60034E787 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
 		F470038729F3B2C00034E787 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
 		F470038929F3B6DB0034E787 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		F470039229F3C00B0034E787 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		F470039429F3C0470034E787 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F470039629F3C0FF0034E787 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		F49F47A92A00BE25006379C7 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
 		F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		F4F7863429EFB743002E2A61 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 		F4064F7229E133E3006BB626 /* Week2 */ = {
 			isa = PBXGroup;
 			children = (
-				F4289C5029EE639F0045BEC8 /* Assignment */,
 				F4064F8929E1482E006BB626 /* Example */,
 				F4064F7B29E13854006BB626 /* Closure */,
 				F4064F7929E13748006BB626 /* DelegatePattern */,
@@ -162,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F7863129EFB641002E2A61 /* Extensions */,
-				F4289C5129EE70A60045BEC8 /* MainViewController.swift */,
+				F4289C5129EE70A60045BEC8 /* LogInViewController.swift */,
 				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
 				F49FCF4529F6CE22001DD6AD /* SheetView */,
 			);
@@ -203,6 +202,7 @@
 		F470037929F3A4EA0034E787 /* Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				F4289C5029EE639F0045BEC8 /* Assignment */,
 				F470039129F3BF9F0034E787 /* CollectionView */,
 				F470038229F3B1700034E787 /* TableView */,
 				F470037A29F3A7AC0034E787 /* CommonView.swift */,
@@ -216,12 +216,12 @@
 		F470038229F3B1700034E787 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				F470038329F3B17B0034E787 /* CarrotViewController.swift */,
 				F470038529F3B1C60034E787 /* Carrot.swift */,
 				F470038729F3B2C00034E787 /* CarrotTableViewCell.swift */,
 				F470038929F3B6DB0034E787 /* UIView + Extension.swift */,
 				F470038D29F3B8460034E787 /* UIImage + Extension.swift */,
 				F470038F29F3BD600034E787 /* NSObject+.swift */,
+				F49F47A92A00BE25006379C7 /* CarrotViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			files = (
 				F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */,
 				F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */,
-				F4289C5229EE70A60045BEC8 /* MainViewController.swift in Sources */,
+				F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */,
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
 				F4064F7F29E1387D006BB626 /* SecondViewController_Closure.swift in Sources */,
@@ -347,6 +347,7 @@
 				F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */,
 				F4064F7829E13543006BB626 /* DataBindProtocol.swift in Sources */,
 				F4064F7D29E13873006BB626 /* FirstViewController_Closure.swift in Sources */,
+				F49F47AA2A00BE25006379C7 /* CarrotViewController.swift in Sources */,
 				F4064F7429E1340D006BB626 /* FirstViewController_DelegatePtn.swift in Sources */,
 				F4F7863729F10F94002E2A61 /* String+.swift in Sources */,
 				F470037F29F3ABCC0034E787 /* BaseViewController.swift in Sources */,
@@ -366,7 +367,6 @@
 				F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */,
 				F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */,
 				F4F7863929F118E3002E2A61 /* LoginSuccessViewController.swift in Sources */,
-				F470038429F3B17B0034E787 /* CarrotViewController.swift in Sources */,
 				F470038629F3B1C60034E787 /* Carrot.swift in Sources */,
 				F470039329F3C00B0034E787 /* PhotoViewController.swift in Sources */,
 			);

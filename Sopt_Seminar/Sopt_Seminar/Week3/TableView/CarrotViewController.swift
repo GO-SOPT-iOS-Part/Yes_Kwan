@@ -2,13 +2,12 @@
 //  CarrotViewController.swift
 //  Sopt_Seminar
 //
-//  Created by 김응관 on 2023/04/22.
+//  Created by 김응관 on 2023/05/02.
 //
 
-import Foundation
 import UIKit
 
-class CarrotViewController: BaseViewController {
+class CarrotViewController: BaseViewController, UITableViewDelegate {
     private let tableView = UITableView()
     private let dummy = Carrot.dummy()
     
@@ -36,8 +35,6 @@ class CarrotViewController: BaseViewController {
     }
 }
 
-extension CarrotViewController: UITableViewDelegate {}
-
 extension CarrotViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,3 +50,4 @@ extension CarrotViewController: UITableViewDataSource {
         return cell
     }
 }
+

@@ -1,10 +1,10 @@
 import UIKit
-
 import SnapKit
 import Then
 
 final class CarrotTableViewCell: UITableViewCell {
     
+    //데이터 정보는 가져오는 데이터에 따라 바뀌므로 초기화 작업 x
     private lazy var carrotImage = UIImageView()
     private let productLabel = UILabel()
     private let placeLabel = UILabel()
@@ -13,6 +13,7 @@ final class CarrotTableViewCell: UITableViewCell {
     private let priceLabel = UILabel()
     private let horizontalStackView = UIStackView()
     
+    // 테이블 뷰 셀 초기화 작업
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -68,10 +69,15 @@ final class CarrotTableViewCell: UITableViewCell {
     
     func setLayout() {
         
+        // 이미지, 상품명라벨, 장소라벨, 시간라벨, (예약라벨/가격라벨)을 보여줄 뷰를 넣어줌
+        // contentView안에 넣어주어야한다 --> tableview는 cell 내부의 subview를 contentView를 통해 관리해주기 때문
         [carrotImage, productLabel, placeLabel,
          timeLabel, horizontalStackView]
             .forEach { contentView.addSubview($0) }
         
+        // 예약라벨/가격라벨을 하나로 묶어 horizontalStackView에 넣어준다
+        // enum == .clear인 경우에는 이들이 안보이게 별도 처리를 해주어야하므로 별도의 뷰에 집어넣어준다
+        // (isHidden 속성을 이용하면 쉽게 없애줄 수 있다)
         [reservationLabel, priceLabel]
             .forEach { horizontalStackView.addArrangedSubview($0) }
         
@@ -108,6 +114,7 @@ final class CarrotTableViewCell: UITableViewCell {
         }
     }
     
+    // 거래 상태에 따른 label의 텍스트 값 설정
     func configureCell(_ carrot: Carrot) {
         
         switch carrot.tradeStatus {
