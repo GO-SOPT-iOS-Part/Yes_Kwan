@@ -41,20 +41,6 @@ class MyPageViewController: UIViewController {
         return btn
     }()
     
-    override func viewDidAppear(_ animated: Bool) {
-        var safeArea = UIEdgeInsets()
-        
-        if let width = view?.bounds.size.width {
-            safeArea.right += width
-        }
-        
-        if let height = view?.bounds.size.height {
-            safeArea.bottom += height
-        }
-        
-        self.additionalSafeAreaInsets = safeArea
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setStyle()
