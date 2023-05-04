@@ -12,7 +12,7 @@ import UIKit
 class LogInViewController: UIViewController, UITextFieldDelegate {
     
     // 0. 닉네임을 저장할 변수
-    var nickName: String?
+    var nickName: String = ""
     
     // 1. chevron backward SF Symbols
     private let chevron: UIImageView = {
@@ -255,16 +255,16 @@ private extension LogInViewController {
     @objc
     func login() {
         let loginSuccessViewController = LoginSuccessViewController()
-
+        
         if nickName != "" {
-            guard let name = nickName else { return }
-            loginSuccessViewController.userEmail = name + " 님"
+            //guard let name = nickName else { return }
+            loginSuccessViewController.userEmail = nickName + " 님"
         } else {
             // 입력된 이메일 값 받아오고, completionHandler 클로저를 통해 데이터 전달
             guard let mails = idTextField.text else { return }
             loginSuccessViewController.userEmail = mails + " 님"
         }
-
+        
         // 화면이동
         self.navigationController?.pushViewController(loginSuccessViewController, animated: true)
     }

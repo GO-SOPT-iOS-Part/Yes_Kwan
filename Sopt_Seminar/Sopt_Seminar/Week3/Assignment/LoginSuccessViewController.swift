@@ -54,6 +54,8 @@ class LoginSuccessViewController: UIViewController {
         style()
         layOut()
         nameBind()
+        
+        mainBtn.addTarget(self, action: #selector(gotoMain), for: .touchUpInside)
     }
     
     // 5. 데이터 바인딩 함수
@@ -98,5 +100,11 @@ private extension LoginSuccessViewController {
             $0.leading.trailing.equalToSuperview().inset(15)
             $0.height.equalTo(55)
         }
+    }
+    
+    @objc
+    func gotoMain() {
+        let mainViewController = MainViewController()
+        self.navigationController?.pushViewController(mainViewController, animated: true)
     }
 }
