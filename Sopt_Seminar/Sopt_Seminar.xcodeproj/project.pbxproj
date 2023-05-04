@@ -40,6 +40,7 @@
 		F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039629F3C0FF0034E787 /* PhotoCell.swift */; };
 		F49F47AA2A00BE25006379C7 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F47A92A00BE25006379C7 /* CarrotViewController.swift */; };
 		F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */; };
+		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
 		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
@@ -82,6 +83,7 @@
 		F470039629F3C0FF0034E787 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F49F47A92A00BE25006379C7 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
 		F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */,
+				F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
 				F4064F7F29E1387D006BB626 /* SecondViewController_Closure.swift in Sources */,
+				F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */,
 				F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */,
 				F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */,
 				F470037B29F3A7AC0034E787 /* CommonView.swift in Sources */,
