@@ -164,11 +164,10 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				F4F7863129EFB641002E2A61 /* Extensions */,
 				F4E1E88E2A0233390040AEF7 /* MainViewController.swift */,
-				F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */,
-				F4289C5129EE70A60045BEC8 /* LogInViewController.swift */,
-				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
+				F4DDC4A42A03D1CC00E97D1A /* MyPage */,
+				F4DDC4A32A03D1B900E97D1A /* Login */,
+				F4F7863129EFB641002E2A61 /* Extensions */,
 				F49FCF4529F6CE22001DD6AD /* SheetView */,
 			);
 			path = Assignment;
@@ -249,6 +248,23 @@
 				F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */,
 			);
 			path = SheetView;
+			sourceTree = "<group>";
+		};
+		F4DDC4A32A03D1B900E97D1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F4289C5129EE70A60045BEC8 /* LogInViewController.swift */,
+				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F4DDC4A42A03D1CC00E97D1A /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		F4F7863129EFB641002E2A61 /* Extensions */ = {
