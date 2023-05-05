@@ -16,28 +16,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate {
         return table
     }()
     
-//    let prof = ProfileView()
-//    let cashe = CashTicketView()
-//    let ad = ADView()
-    
-//    // 스크롤 뷰 생성
-//    private let scrollView: UIScrollView = {
-//        let view = UIScrollView()
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        view.backgroundColor = .black
-//        view.showsVerticalScrollIndicator = true
-//        return view
-//    }()
-    
-//    // 0. 뷰들을 담을 Vertical StackView
-//    private let stackView: UIStackView = {
-//        let vertical = UIStackView()
-//        vertical.translatesAutoresizingMaskIntoConstraints = false
-//        vertical.axis = .vertical
-//        vertical.spacing = 30
-//        vertical.distribution = .equalSpacing
-//        return vertical
-//    }()
+    private let dummy = ["이용권", "1:1 문의내역", "예약알림", "회원정보 수정", "프로모션 정보 수신 동의"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +36,6 @@ class MyPageViewController: UIViewController, UITableViewDelegate {
         // 3. rightbarbutton에 추가
         self.navigationItem.rightBarButtonItems = [gear, bell]
         
-//        ad.addTarget(self, action: #selector(gotoBuy), for: .touchUpInside)
-        
         tableView.rowHeight = UITableView.automaticDimension
     }
 }
@@ -70,6 +47,7 @@ extension MyPageViewController {
         
         tableView.do {
             $0.register(StackViewCell.self, forCellReuseIdentifier: StackViewCell.className)
+            $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.className)
 
             $0.delegate = self
             $0.dataSource = self
@@ -108,15 +86,22 @@ extension MyPageViewController {
 extension MyPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dummy.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: StackViewCell.className, for: indexPath) as? StackViewCell else { return UITableViewCell() }
-        
-//        cell.setText(dummy[indexPath.row])
-        
-        return cell
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: StackViewCell.className, for: indexPath) as? StackViewCell else { return UITableViewCell() }
+            return cell
+            
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.className, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
+            
+            cell.setText(dummy[indexPath.row - 1])
+            return cell
+            
+        }
     }
 }

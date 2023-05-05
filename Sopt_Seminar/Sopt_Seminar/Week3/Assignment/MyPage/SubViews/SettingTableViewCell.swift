@@ -71,11 +71,17 @@ class SettingTableViewCell: UITableViewCell {
             $0.top.equalTo(contentView.snp.top).inset(10)
             $0.centerY.equalTo(section.snp.centerY)
             $0.trailing.equalTo(contentView.snp.trailing).inset(10)
-            $0.height.equalTo(30)
+            $0.height.equalTo(35)
         }
     }
     
     func setText(_ data: String) {
         section.text = data
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 15, left: 10, bottom: 0, right: 10))
     }
 }
