@@ -44,6 +44,7 @@
 		F4B5F92A2A04944C008DA7B7 /* ADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9292A04944C008DA7B7 /* ADView.swift */; };
 		F4B5F92E2A04A823008DA7B7 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F92D2A04A823008DA7B7 /* PurchaseViewController.swift */; };
 		F4B5F9302A04AB52008DA7B7 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F92F2A04AB52008DA7B7 /* SettingTableViewController.swift */; };
+		F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -91,6 +92,7 @@
 		F4B5F9292A04944C008DA7B7 /* ADView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADView.swift; sourceTree = "<group>"; };
 		F4B5F92D2A04A823008DA7B7 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		F4B5F92F2A04AB52008DA7B7 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */,
 				F4B5F9272A0414D9008DA7B7 /* CashTicketView.swift */,
 				F4B5F9292A04944C008DA7B7 /* ADView.swift */,
+				F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				F4B5F92A2A04944C008DA7B7 /* ADView.swift in Sources */,
 				F470039529F3C0470034E787 /* Photo.swift in Sources */,
 				F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */,
+				F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */,
 				F4B5F9302A04AB52008DA7B7 /* SettingTableViewController.swift in Sources */,
 				F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */,
 				F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */,
