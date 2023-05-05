@@ -59,9 +59,10 @@ class ProfileView: UIView {
         }
         
         NSLayoutConstraint.activate([
-            profile.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
-            profile.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15)
+            profile.topAnchor.constraint(equalTo: self.topAnchor),
+            profile.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            profile.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
         
         profile.snp.makeConstraints {

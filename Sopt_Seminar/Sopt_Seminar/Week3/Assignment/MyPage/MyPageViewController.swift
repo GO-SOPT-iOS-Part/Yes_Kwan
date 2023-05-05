@@ -10,11 +10,22 @@ import SnapKit
 
 class MyPageViewController: UIViewController {
     
+    let allView: UIView = {
+        let views = UIView()
+        views.translatesAutoresizingMaskIntoConstraints = false
+        views.backgroundColor = .black
+        return views
+    }()
+    
+    let prof = ProfileView()
+    let cashe = CashTicketView()
+    
     // 스크롤 뷰 생성
     private let scrollView: UIScrollView = {
         let view = UIScrollView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .black
+        view.showsVerticalScrollIndicator = true
         return view
     }()
     
@@ -23,7 +34,8 @@ class MyPageViewController: UIViewController {
         let vertical = UIStackView()
         vertical.translatesAutoresizingMaskIntoConstraints = false
         vertical.axis = .vertical
-        vertical.spacing = 5
+        vertical.spacing = 30
+        vertical.distribution = .equalSpacing
         return vertical
     }()
     
@@ -45,9 +57,6 @@ class MyPageViewController: UIViewController {
         
         // 3. rightbarbutton에 추가
         self.navigationItem.rightBarButtonItems = [gear, bell]
-        
-        let profileView = ProfileView()
-        stackView.addArrangedSubview(profileView)
     }
 }
 
@@ -62,7 +71,15 @@ extension MyPageViewController {
         scrollView.addSubview(stackView)
     }
     
+    
+    
     func setLayOut() {
+        
+        [prof, cashe].forEach {
+            stackView.addArrangedSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
         
         // 3. 레이아웃 설정
         NSLayoutConstraint.activate([
@@ -76,8 +93,20 @@ extension MyPageViewController {
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
-            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
         ])
+        
+        prof.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().inset(15)
+            $0.trailing.equalToSuperview().inset(15)
+        }
+        
+        cashe.snp.makeConstraints {
+            //$0.top.equalTo(prof.snp.bottom).offset(20)
+            $0.leading.equalTo(prof.snp.leading)
+            $0.trailing.equalTo(prof.snp.trailing)
+        }
     }
     
     @objc
