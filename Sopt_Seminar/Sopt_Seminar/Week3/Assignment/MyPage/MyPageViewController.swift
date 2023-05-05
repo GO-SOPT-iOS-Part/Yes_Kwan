@@ -99,11 +99,10 @@ extension MyPageViewController {
         prof.snp.makeConstraints {
             $0.top.equalToSuperview().inset(20)
             $0.leading.equalToSuperview().inset(15)
-            $0.trailing.equalToSuperview().inset(15)
+            $0.trailing.equalToSuperview().offset(-15)
         }
         
         cashe.snp.makeConstraints {
-            //$0.top.equalTo(prof.snp.bottom).offset(20)
             $0.leading.equalTo(prof.snp.leading)
             $0.trailing.equalTo(prof.snp.trailing)
         }

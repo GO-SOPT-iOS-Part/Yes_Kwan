@@ -62,7 +62,7 @@ class ProfileView: UIView {
             profile.topAnchor.constraint(equalTo: self.topAnchor),
             profile.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             profile.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
         ])
         
         profile.snp.makeConstraints {
