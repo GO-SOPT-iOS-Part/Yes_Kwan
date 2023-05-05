@@ -53,4 +53,8 @@ class SettingTableViewCell: UITableViewCell {
             section.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
+    
+    func setText(_ data: String) {
+        section.text = data
+    }
 }
