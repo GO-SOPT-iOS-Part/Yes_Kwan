@@ -20,7 +20,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewD
     var index = 0
     var limit = 7
     
-    private let dummy = ["스택", "이용권", "1:1 문의내역", "예약알림", "회원정보 수정", "프로모션 정보 수신 동의", "선", "공지사항", "이벤트", "고객센터", "티빙 알아보기"]
+    private let dummy = ["스택", "이용권", "1:1 문의내역", "예약알림", "회원정보 수정", "프로모션 정보 수신 동의", "선", "공지사항", "이벤트", "고객센터", "티빙 알아보기", "로그아웃"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +56,7 @@ extension MyPageViewController {
             $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.className)
             $0.register(DividerView.self, forCellReuseIdentifier: DividerView.className)
             $0.register(AnotherTableViewCell.self, forCellReuseIdentifier: AnotherTableViewCell.className)
+            $0.register(LogOutButtonView.self, forCellReuseIdentifier: LogOutButtonView.className)
             
             $0.delegate = self
             $0.dataSource = self
@@ -110,6 +111,11 @@ extension MyPageViewController: UITableViewDataSource {
             
             cell.setText(dummy[indexPath.row])
             return cell
+        
+        case 11:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LogOutButtonView.className, for: indexPath) as? LogOutButtonView else { return UITableViewCell() }
+            cell.setText(dummy[indexPath.row])
+            return cell
             
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AnotherTableViewCell.className, for: indexPath) as? AnotherTableViewCell else { return UITableViewCell() }
@@ -120,7 +126,7 @@ extension MyPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == limit - 1 {
+        if indexPath.row == 6 {
             self.perform(#selector(loadTable), with: nil, afterDelay: 0.5)
         }
     }
