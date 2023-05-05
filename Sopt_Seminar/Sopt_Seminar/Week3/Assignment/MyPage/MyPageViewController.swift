@@ -22,13 +22,26 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewD
     
     private let dummy = ["스택", "이용권", "1:1 문의내역", "예약알림", "회원정보 수정", "프로모션 정보 수신 동의", "선", "공지사항", "이벤트", "고객센터", "티빙 알아보기", "로그아웃"]
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .black
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 백버튼 틴트컬러 변경 & Back 글자 삭제
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.topItem?.title = ""
         
         setStyle()
         viewSetting()
         setLayOut()
-
+        
         // 1. bell button
         let bell = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: self, action: #selector(bellBtnAction))
         bell.tintColor = .gray
