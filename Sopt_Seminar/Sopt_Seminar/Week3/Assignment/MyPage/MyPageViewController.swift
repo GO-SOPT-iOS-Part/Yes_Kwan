@@ -20,26 +20,6 @@ class MyPageViewController: UIViewController, UIScrollViewDelegate {
         return table
     }()
     
-    
-    // 스크롤 뷰 생성
-//    private let scrollView: UIScrollView = {
-//        let view = UIScrollView()
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        view.backgroundColor = .black
-//        view.showsVerticalScrollIndicator = true
-//        return view
-//    }()
-    
-    // 뷰들을 담을 Vertical StackView
-    private let stackView: UIStackView = {
-        let vertical = UIStackView()
-        vertical.translatesAutoresizingMaskIntoConstraints = false
-        vertical.axis = .vertical
-        vertical.spacing = 30
-        vertical.distribution = .equalSpacing
-        return vertical
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,15 +63,9 @@ extension MyPageViewController {
     
     func viewSetting() {
         view.addSubview(tableView)
-        //tableView.addSubview(stackView)
     }
     
     func setLayOut() {
-        
-//        [prof, cashe, ad].forEach {
-//            stackView.addArrangedSubview($0)
-//            $0.translatesAutoresizingMaskIntoConstraints = false
-//        }
         
         // 3. 레이아웃 설정
         NSLayoutConstraint.activate([
@@ -100,22 +74,6 @@ extension MyPageViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
-//        prof.snp.makeConstraints {
-//            $0.top.equalToSuperview().inset(20)
-//            $0.leading.equalToSuperview().inset(15)
-//            $0.trailing.equalToSuperview().inset(15)
-//        }
-//
-//        cashe.snp.makeConstraints {
-//            $0.leading.equalTo(prof.snp.leading)
-//            $0.trailing.equalTo(prof.snp.trailing)
-//        }
-//
-//        ad.snp.makeConstraints {
-//            $0.leading.equalTo(prof.snp.leading)
-//            $0.trailing.equalTo(prof.snp.trailing)
-//        }
     }
     
     @objc
