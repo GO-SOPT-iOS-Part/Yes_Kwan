@@ -8,17 +8,7 @@
 import UIKit
 import SnapKit
 
-class ProfileView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        loadView()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        loadView()
-    }
+class ProfileView: UITableViewCell {
     
     // 1. profile image
     private let profile: UIImageView = {
@@ -51,7 +41,26 @@ class ProfileView: UIView {
         return btn
     }()
     
-    private func loadView() {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setStyle()
+        setLayOut()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setStyle()
+        setLayOut()
+    }
+    
+    private func setStyle() {
+        separatorInset.left = 0
+        selectionStyle = .none
+        self.backgroundColor = .black
+    }
+    
+    
+    private func setLayOut() {
         
         [profile, name, button].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +89,5 @@ class ProfileView: UIView {
             $0.width.equalTo(100)
             $0.height.equalTo(40)
         }
-        
-        self.frame = bounds
     }
 }

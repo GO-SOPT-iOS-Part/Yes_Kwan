@@ -8,29 +8,29 @@
 import UIKit
 import SnapKit
 
-class MyPageViewController: UIViewController {
+class MyPageViewController: UIViewController, UIScrollViewDelegate {
     
-    let allView: UIView = {
-        let views = UIView()
-        views.translatesAutoresizingMaskIntoConstraints = false
-        views.backgroundColor = .black
-        return views
+    private let dummy = ["이용권", "1:1 문의내역", "예약알림", "회원정보 수정", "프로모션 정보 수신 동의"]
+    
+    // 테이블 뷰 생성
+    private let tableView: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.backgroundColor = .black
+        return table
     }()
     
-    let prof = ProfileView()
-    let cashe = CashTicketView()
-    let ad = ADView()
     
     // 스크롤 뷰 생성
-    private let scrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
-        view.showsVerticalScrollIndicator = true
-        return view
-    }()
+//    private let scrollView: UIScrollView = {
+//        let view = UIScrollView()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.backgroundColor = .black
+//        view.showsVerticalScrollIndicator = true
+//        return view
+//    }()
     
-    // 0. 뷰들을 담을 Vertical StackView
+    // 뷰들을 담을 Vertical StackView
     private let stackView: UIStackView = {
         let vertical = UIStackView()
         vertical.translatesAutoresizingMaskIntoConstraints = false
@@ -45,8 +45,8 @@ class MyPageViewController: UIViewController {
         
         setStyle()
         viewSetting()
-        
         setLayOut()
+        
         
         // 1. bell button
         let bell = UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: self, action: #selector(bellBtnAction))
@@ -58,60 +58,64 @@ class MyPageViewController: UIViewController {
         
         // 3. rightbarbutton에 추가
         self.navigationItem.rightBarButtonItems = [gear, bell]
+        self.tabBarController?.tabBar.tintColor = .black
         
-        ad.addTarget(self, action: #selector(gotoBuy), for: .touchUpInside)
+//        ad.addTarget(self, action: #selector(gotoBuy), for: .touchUpInside)
     }
 }
 
 extension MyPageViewController {
     
     func setStyle() {
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        
+        tableView.do {
+            $0.register(ProfileView.self, forCellReuseIdentifier: ProfileView.className)
+            $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.className)
+            $0.register(ADView.self, forCellReuseIdentifier: ADView.className)
+            $0.register(CashTicketView.self, forCellReuseIdentifier: CashTicketView.className)
+            
+            $0.rowHeight = 55
+            $0.delegate = self
+            $0.dataSource = self
+        }
     }
     
     func viewSetting() {
-        view.addSubview(scrollView)
-        scrollView.addSubview(stackView)
+        view.addSubview(tableView)
+        //tableView.addSubview(stackView)
     }
     
     func setLayOut() {
         
-        [prof, cashe, ad].forEach {
-            stackView.addArrangedSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
+//        [prof, cashe, ad].forEach {
+//            stackView.addArrangedSubview($0)
+//            $0.translatesAutoresizingMaskIntoConstraints = false
+//        }
         
         // 3. 레이아웃 설정
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            
-            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        prof.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(20)
-            $0.leading.equalToSuperview().inset(15)
-            $0.trailing.equalToSuperview().inset(15)
-        }
-        
-        cashe.snp.makeConstraints {
-            $0.leading.equalTo(prof.snp.leading)
-            $0.trailing.equalTo(prof.snp.trailing)
-        }
-        
-        ad.snp.makeConstraints {
-            $0.leading.equalTo(prof.snp.leading)
-            $0.trailing.equalTo(prof.snp.trailing)
-        }
+//        prof.snp.makeConstraints {
+//            $0.top.equalToSuperview().inset(20)
+//            $0.leading.equalToSuperview().inset(15)
+//            $0.trailing.equalToSuperview().inset(15)
+//        }
+//
+//        cashe.snp.makeConstraints {
+//            $0.leading.equalTo(prof.snp.leading)
+//            $0.trailing.equalTo(prof.snp.trailing)
+//        }
+//
+//        ad.snp.makeConstraints {
+//            $0.leading.equalTo(prof.snp.leading)
+//            $0.trailing.equalTo(prof.snp.trailing)
+//        }
     }
     
     @objc
@@ -128,5 +132,36 @@ extension MyPageViewController {
     func gotoBuy() {
         let purchaseViewController = PurchaseViewController()
         self.navigationController?.pushViewController(purchaseViewController, animated: true)
+    }
+}
+
+
+extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dummy.count + 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileView.className, for: indexPath) as? ProfileView else { return UITableViewCell() }
+            return cell
+        
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CashTicketView.className, for: indexPath) as? CashTicketView else { return UITableViewCell() }
+            return cell
+            
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ADView.className, for: indexPath) as? ADView else { return UITableViewCell() }
+            return cell
+        
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.className, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
+            
+            cell.setText(dummy[indexPath.row - 3])
+            return cell
+        }
     }
 }

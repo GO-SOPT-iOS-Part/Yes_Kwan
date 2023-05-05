@@ -8,28 +8,20 @@
 import UIKit
 import SnapKit
 
-class ADView: UIButton {
+class ADView: UITableViewCell {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        style()
-        loadView()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setStyle()
+        setLayOut()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        style()
-        loadView()
+        setStyle()
+        setLayOut()
     }
-    
-    private let horizonStackView: UIStackView = {
-        let horizon = UIStackView()
-        horizon.axis = .horizontal
-        horizon.spacing = 2
-        horizon.alignment = .center
-        horizon.distribution = .fill
-        return horizon
-    }()
     
     private let adLabel: UILabel = {
         let advertise = UILabel()
@@ -81,7 +73,13 @@ class ADView: UIButton {
         self.layer.cornerRadius = 5
     }
     
-    private func loadView() {
+    private func setStyle() {
+        separatorInset.left = 0
+        selectionStyle = .none
+        self.backgroundColor = .black
+    }
+    
+    private func setLayOut() {
         [adLabel, tvnImg, jtbcImg, secondLabel, lasLabel, rightChevron].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview($0)
@@ -114,7 +112,5 @@ class ADView: UIButton {
             $0.top.equalTo(adLabel.snp.bottom).offset(10)
             $0.leading.equalTo(adLabel.snp.leading)
         }
-
-        self.frame = bounds
     }
 }
