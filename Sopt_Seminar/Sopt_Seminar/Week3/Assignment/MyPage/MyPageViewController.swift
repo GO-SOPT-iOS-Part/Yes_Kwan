@@ -19,6 +19,7 @@ class MyPageViewController: UIViewController {
     
     let prof = ProfileView()
     let cashe = CashTicketView()
+    let ad = ADView()
     
     // 스크롤 뷰 생성
     private let scrollView: UIScrollView = {
@@ -57,6 +58,8 @@ class MyPageViewController: UIViewController {
         
         // 3. rightbarbutton에 추가
         self.navigationItem.rightBarButtonItems = [gear, bell]
+        
+        ad.addTarget(self, action: #selector(gotoBuy), for: .touchUpInside)
     }
 }
 
@@ -71,11 +74,9 @@ extension MyPageViewController {
         scrollView.addSubview(stackView)
     }
     
-    
-    
     func setLayOut() {
         
-        [prof, cashe].forEach {
+        [prof, cashe, ad].forEach {
             stackView.addArrangedSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -99,10 +100,15 @@ extension MyPageViewController {
         prof.snp.makeConstraints {
             $0.top.equalToSuperview().inset(20)
             $0.leading.equalToSuperview().inset(15)
-            $0.trailing.equalToSuperview().offset(-15)
+            $0.trailing.equalToSuperview().inset(15)
         }
         
         cashe.snp.makeConstraints {
+            $0.leading.equalTo(prof.snp.leading)
+            $0.trailing.equalTo(prof.snp.trailing)
+        }
+        
+        ad.snp.makeConstraints {
             $0.leading.equalTo(prof.snp.leading)
             $0.trailing.equalTo(prof.snp.trailing)
         }
@@ -116,5 +122,11 @@ extension MyPageViewController {
     @objc
     func geatBtnAction() {
         print(#function)
+    }
+    
+    @objc
+    func gotoBuy() {
+        let purchaseViewController = PurchaseViewController()
+        self.navigationController?.pushViewController(purchaseViewController, animated: true)
     }
 }
