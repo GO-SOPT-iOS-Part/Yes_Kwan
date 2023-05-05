@@ -17,7 +17,7 @@
 		F4064F8829E14277006BB626 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = F4064F8729E14277006BB626 /* Inject */; };
 		F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4064F8B29E1485C006BB626 /* FirstViewController_Ex1.swift */; };
 		F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4064F8D29E14988006BB626 /* SecondViewController_Ex1.swift */; };
-		F4289C5229EE70A60045BEC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4289C5129EE70A60045BEC8 /* MainViewController.swift */; };
+		F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4289C5129EE70A60045BEC8 /* LogInViewController.swift */; };
 		F44B4E2F29D7FA29003658CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E2E29D7FA29003658CD /* AppDelegate.swift */; };
 		F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E3029D7FA29003658CD /* SceneDelegate.swift */; };
 		F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E3229D7FA29003658CD /* ViewController.swift */; };
@@ -25,6 +25,32 @@
 		F44B4E3B29D7FA2A003658CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E3929D7FA2A003658CD /* LaunchScreen.storyboard */; };
 		F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4229D806BC003658CD /* PracticeViewController.swift */; };
 		F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */; };
+		F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470034D29F26AF80034E787 /* NicknameViewController.swift */; };
+		F470037B29F3A7AC0034E787 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037A29F3A7AC0034E787 /* CommonView.swift */; };
+		F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037C29F3A8EF0034E787 /* SecondViewController.swift */; };
+		F470037F29F3ABCC0034E787 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037E29F3ABCC0034E787 /* BaseViewController.swift */; };
+		F470038129F3ACCC0034E787 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038029F3ACCC0034E787 /* BaseView.swift */; };
+		F470038629F3B1C60034E787 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038529F3B1C60034E787 /* Carrot.swift */; };
+		F470038829F3B2C00034E787 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038729F3B2C00034E787 /* CarrotTableViewCell.swift */; };
+		F470038A29F3B6DB0034E787 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038929F3B6DB0034E787 /* UIView + Extension.swift */; };
+		F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038D29F3B8460034E787 /* UIImage + Extension.swift */; };
+		F470039029F3BD600034E787 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470038F29F3BD600034E787 /* NSObject+.swift */; };
+		F470039329F3C00B0034E787 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039229F3C00B0034E787 /* PhotoViewController.swift */; };
+		F470039529F3C0470034E787 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039429F3C0470034E787 /* Photo.swift */; };
+		F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470039629F3C0FF0034E787 /* PhotoCell.swift */; };
+		F49F47AA2A00BE25006379C7 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F47A92A00BE25006379C7 /* CarrotViewController.swift */; };
+		F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */; };
+		F4B5F9282A0414D9008DA7B7 /* CashTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9272A0414D9008DA7B7 /* CashTicketView.swift */; };
+		F4B5F92A2A04944C008DA7B7 /* ADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9292A04944C008DA7B7 /* ADView.swift */; };
+		F4B5F92E2A04A823008DA7B7 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F92D2A04A823008DA7B7 /* PurchaseViewController.swift */; };
+		F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */; };
+		F4B5F93B2A04FFFD008DA7B7 /* StackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93A2A04FFFD008DA7B7 /* StackViewCell.swift */; };
+		F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */; };
+		F4B5F9402A051491008DA7B7 /* AnotherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93F2A051491008DA7B7 /* AnotherTableViewCell.swift */; };
+		F4B5F9422A052D83008DA7B7 /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9412A052D83008DA7B7 /* LogOutButtonView.swift */; };
+		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
+		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
+		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
 		F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863229EFB652002E2A61 /* UIButton+.swift */; };
 		F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863429EFB743002E2A61 /* UITextField+.swift */; };
 		F4F7863729F10F94002E2A61 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7863629F10F94002E2A61 /* String+.swift */; };
@@ -40,7 +66,7 @@
 		F4064F7E29E1387D006BB626 /* SecondViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_Closure.swift; sourceTree = "<group>"; };
 		F4064F8B29E1485C006BB626 /* FirstViewController_Ex1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_Ex1.swift; sourceTree = "<group>"; };
 		F4064F8D29E14988006BB626 /* SecondViewController_Ex1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_Ex1.swift; sourceTree = "<group>"; };
-		F4289C5129EE70A60045BEC8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F4289C5129EE70A60045BEC8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		F44B4E2B29D7FA29003658CD /* Sopt_Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt_Seminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B4E2E29D7FA29003658CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B4E3029D7FA29003658CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +76,32 @@
 		F44B4E3C29D7FA2A003658CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F44B4E4229D806BC003658CD /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController2.swift; sourceTree = "<group>"; };
+		F470034D29F26AF80034E787 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		F470037A29F3A7AC0034E787 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
+		F470037C29F3A8EF0034E787 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F470037E29F3ABCC0034E787 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F470038029F3ACCC0034E787 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F470038529F3B1C60034E787 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
+		F470038729F3B2C00034E787 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
+		F470038929F3B6DB0034E787 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		F470038D29F3B8460034E787 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
+		F470038F29F3BD600034E787 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		F470039229F3C00B0034E787 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		F470039429F3C0470034E787 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F470039629F3C0FF0034E787 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		F49F47A92A00BE25006379C7 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
+		F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		F4B5F9272A0414D9008DA7B7 /* CashTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTicketView.swift; sourceTree = "<group>"; };
+		F4B5F9292A04944C008DA7B7 /* ADView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADView.swift; sourceTree = "<group>"; };
+		F4B5F92D2A04A823008DA7B7 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		F4B5F93A2A04FFFD008DA7B7 /* StackViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewCell.swift; sourceTree = "<group>"; };
+		F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		F4B5F93F2A051491008DA7B7 /* AnotherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTableViewCell.swift; sourceTree = "<group>"; };
+		F4B5F9412A052D83008DA7B7 /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
+		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F4F7863229EFB652002E2A61 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		F4F7863429EFB743002E2A61 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		F4F7863629F10F94002E2A61 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -84,7 +136,6 @@
 		F4064F7229E133E3006BB626 /* Week2 */ = {
 			isa = PBXGroup;
 			children = (
-				F4289C5029EE639F0045BEC8 /* Assignment */,
 				F4064F8929E1482E006BB626 /* Example */,
 				F4064F7B29E13854006BB626 /* Closure */,
 				F4064F7929E13748006BB626 /* DelegatePattern */,
@@ -131,9 +182,11 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F4E1E88E2A0233390040AEF7 /* MainViewController.swift */,
+				F4DDC4A42A03D1CC00E97D1A /* MyPage */,
+				F4DDC4A32A03D1B900E97D1A /* Login */,
 				F4F7863129EFB641002E2A61 /* Extensions */,
-				F4289C5129EE70A60045BEC8 /* MainViewController.swift */,
-				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
+				F49FCF4529F6CE22001DD6AD /* SheetView */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -161,11 +214,92 @@
 				F44B4E3029D7FA29003658CD /* SceneDelegate.swift */,
 				F4064F7129E133DB006BB626 /* Week1 */,
 				F4064F7229E133E3006BB626 /* Week2 */,
-				F44B4E3729D7FA2A003658CD /* Assets.xcassets */,
+				F470037929F3A4EA0034E787 /* Week3 */,
 				F44B4E3929D7FA2A003658CD /* LaunchScreen.storyboard */,
+				F44B4E3729D7FA2A003658CD /* Assets.xcassets */,
 				F44B4E3C29D7FA2A003658CD /* Info.plist */,
 			);
 			path = Sopt_Seminar;
+			sourceTree = "<group>";
+		};
+		F470037929F3A4EA0034E787 /* Week3 */ = {
+			isa = PBXGroup;
+			children = (
+				F4289C5029EE639F0045BEC8 /* Assignment */,
+				F470039129F3BF9F0034E787 /* CollectionView */,
+				F470038229F3B1700034E787 /* TableView */,
+				F470037A29F3A7AC0034E787 /* CommonView.swift */,
+				F470037C29F3A8EF0034E787 /* SecondViewController.swift */,
+				F470037E29F3ABCC0034E787 /* BaseViewController.swift */,
+				F470038029F3ACCC0034E787 /* BaseView.swift */,
+			);
+			path = Week3;
+			sourceTree = "<group>";
+		};
+		F470038229F3B1700034E787 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F470038529F3B1C60034E787 /* Carrot.swift */,
+				F470038729F3B2C00034E787 /* CarrotTableViewCell.swift */,
+				F470038929F3B6DB0034E787 /* UIView + Extension.swift */,
+				F470038D29F3B8460034E787 /* UIImage + Extension.swift */,
+				F470038F29F3BD600034E787 /* NSObject+.swift */,
+				F49F47A92A00BE25006379C7 /* CarrotViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F470039129F3BF9F0034E787 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F470039229F3C00B0034E787 /* PhotoViewController.swift */,
+				F470039429F3C0470034E787 /* Photo.swift */,
+				F470039629F3C0FF0034E787 /* PhotoCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		F49FCF4529F6CE22001DD6AD /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				F470034D29F26AF80034E787 /* NicknameViewController.swift */,
+				F49FCF4129F6BBE0001DD6AD /* SheetViewController.swift */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		F4B5F9312A04AB5A008DA7B7 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				F4B5F93A2A04FFFD008DA7B7 /* StackViewCell.swift */,
+				F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */,
+				F4B5F9272A0414D9008DA7B7 /* CashTicketView.swift */,
+				F4B5F9292A04944C008DA7B7 /* ADView.swift */,
+				F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */,
+				F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */,
+				F4B5F93F2A051491008DA7B7 /* AnotherTableViewCell.swift */,
+				F4B5F9412A052D83008DA7B7 /* LogOutButtonView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		F4DDC4A32A03D1B900E97D1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F4289C5129EE70A60045BEC8 /* LogInViewController.swift */,
+				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F4DDC4A42A03D1CC00E97D1A /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				F4B5F9312A04AB5A008DA7B7 /* SubViews */,
+				F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */,
+				F4B5F92D2A04A823008DA7B7 /* PurchaseViewController.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		F4F7863129EFB641002E2A61 /* Extensions */ = {
@@ -261,22 +395,48 @@
 			files = (
 				F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */,
 				F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */,
-				F4289C5229EE70A60045BEC8 /* MainViewController.swift in Sources */,
+				F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */,
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
 				F4064F7F29E1387D006BB626 /* SecondViewController_Closure.swift in Sources */,
+				F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */,
+				F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */,
+				F4B5F9282A0414D9008DA7B7 /* CashTicketView.swift in Sources */,
+				F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */,
+				F470037B29F3A7AC0034E787 /* CommonView.swift in Sources */,
 				F4F7863529EFB743002E2A61 /* UITextField+.swift in Sources */,
 				F4064F7829E13543006BB626 /* DataBindProtocol.swift in Sources */,
 				F4064F7D29E13873006BB626 /* FirstViewController_Closure.swift in Sources */,
+				F49F47AA2A00BE25006379C7 /* CarrotViewController.swift in Sources */,
 				F4064F7429E1340D006BB626 /* FirstViewController_DelegatePtn.swift in Sources */,
 				F4F7863729F10F94002E2A61 /* String+.swift in Sources */,
+				F470037F29F3ABCC0034E787 /* BaseViewController.swift in Sources */,
 				F44B4E2F29D7FA29003658CD /* AppDelegate.swift in Sources */,
+				F470038A29F3B6DB0034E787 /* UIView + Extension.swift in Sources */,
 				F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */,
+				F4B5F92A2A04944C008DA7B7 /* ADView.swift in Sources */,
+				F470039529F3C0470034E787 /* Photo.swift in Sources */,
 				F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */,
+				F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */,
 				F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */,
+				F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */,
 				F4F7863B29F12B72002E2A61 /* UIImage+.swift in Sources */,
+				F470038129F3ACCC0034E787 /* BaseView.swift in Sources */,
+				F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */,
+				F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */,
+				F470039029F3BD600034E787 /* NSObject+.swift in Sources */,
+				F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */,
+				F470038829F3B2C00034E787 /* CarrotTableViewCell.swift in Sources */,
+				F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */,
+				F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */,
 				F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */,
+				F4B5F93B2A04FFFD008DA7B7 /* StackViewCell.swift in Sources */,
+				F4B5F92E2A04A823008DA7B7 /* PurchaseViewController.swift in Sources */,
 				F4F7863929F118E3002E2A61 /* LoginSuccessViewController.swift in Sources */,
+				F4B5F9402A051491008DA7B7 /* AnotherTableViewCell.swift in Sources */,
+				F4B5F9422A052D83008DA7B7 /* LogOutButtonView.swift in Sources */,
+				F470038629F3B1C60034E787 /* Carrot.swift in Sources */,
+				F470039329F3C00B0034E787 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
