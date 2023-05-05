@@ -53,14 +53,6 @@ class SettingTableViewCell: UITableViewCell {
             contentView.addSubview($0)
         }
         
-//        NSLayoutConstraint.activate([
-//            section.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-//            section.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
-//            section.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-//            chevron.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-//            section.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-//        ])
-        
         section.snp.makeConstraints {
             $0.top.equalTo(contentView.snp.top).inset(10)
             $0.leading.equalTo(contentView.snp.leading).inset(10)

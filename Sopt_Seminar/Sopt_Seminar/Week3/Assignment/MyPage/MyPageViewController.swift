@@ -48,6 +48,7 @@ extension MyPageViewController {
         tableView.do {
             $0.register(StackViewCell.self, forCellReuseIdentifier: StackViewCell.className)
             $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.className)
+            $0.register(DividerView.self, forCellReuseIdentifier: DividerView.className)
 
             $0.delegate = self
             $0.dataSource = self
@@ -75,18 +76,12 @@ extension MyPageViewController {
     func geatBtnAction() {
         print(#function)
     }
-    
-    @objc
-    func gotoBuy() {
-        let purchaseViewController = PurchaseViewController()
-        self.navigationController?.pushViewController(purchaseViewController, animated: true)
-    }
 }
 
 extension MyPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummy.count + 1
+        return dummy.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -94,6 +89,10 @@ extension MyPageViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: StackViewCell.className, for: indexPath) as? StackViewCell else { return UITableViewCell() }
+            return cell
+        
+        case 6:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DividerView.className, for: indexPath) as? DividerView else { return UITableViewCell() }
             return cell
             
         default:

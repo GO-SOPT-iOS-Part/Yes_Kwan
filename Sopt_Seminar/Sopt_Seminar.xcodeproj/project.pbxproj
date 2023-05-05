@@ -46,6 +46,7 @@
 		F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */; };
 		F4B5F9372A04D9C4008DA7B7 /* TablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9362A04D9C4008DA7B7 /* TablesViewController.swift */; };
 		F4B5F93B2A04FFFD008DA7B7 /* StackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93A2A04FFFD008DA7B7 /* StackViewCell.swift */; };
+		F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -95,6 +96,7 @@
 		F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		F4B5F9362A04D9C4008DA7B7 /* TablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewController.swift; sourceTree = "<group>"; };
 		F4B5F93A2A04FFFD008DA7B7 /* StackViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewCell.swift; sourceTree = "<group>"; };
+		F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				F4B5F9272A0414D9008DA7B7 /* CashTicketView.swift */,
 				F4B5F9292A04944C008DA7B7 /* ADView.swift */,
 				F4B5F9322A04BA0E008DA7B7 /* SettingTableViewCell.swift */,
+				F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */,
 				F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */,
 				F470039029F3BD600034E787 /* NSObject+.swift in Sources */,
+				F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */,
 				F470038829F3B2C00034E787 /* CarrotTableViewCell.swift in Sources */,
 				F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */,
 				F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */,
