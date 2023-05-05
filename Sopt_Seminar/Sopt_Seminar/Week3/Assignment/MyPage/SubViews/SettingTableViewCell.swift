@@ -25,6 +25,7 @@ class SettingTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setStyle()
         setLayOut()
+        layoutSubviews()
     }
     
     @available(*, unavailable)
@@ -32,6 +33,7 @@ class SettingTableViewCell: UITableViewCell {
         super.init(coder: coder)
         setStyle()
         setLayOut()
+        layoutSubviews()
     }
     
     func setStyle() {
@@ -51,16 +53,25 @@ class SettingTableViewCell: UITableViewCell {
             contentView.addSubview($0)
         }
         
-        NSLayoutConstraint.activate([
-            section.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
-            section.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
-            section.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            chevron.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            section.centerYAnchor.constraint(equalTo: self.centerYAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            section.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+//            section.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+//            section.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+//            chevron.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+//            section.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+//        ])
         
+        section.snp.makeConstraints {
+            $0.top.equalTo(contentView.snp.top).inset(10)
+            $0.leading.equalTo(contentView.snp.leading).inset(10)
+            $0.centerY.equalTo(contentView.snp.centerY)
+        }
+    
         chevron.snp.makeConstraints {
+            $0.top.equalTo(contentView.snp.top).inset(10)
             $0.centerY.equalTo(section.snp.centerY)
+            $0.trailing.equalTo(contentView.snp.trailing).inset(10)
+            $0.height.equalTo(30)
         }
     }
     

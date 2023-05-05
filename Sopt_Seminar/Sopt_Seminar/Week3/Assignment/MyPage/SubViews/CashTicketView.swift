@@ -8,20 +8,18 @@
 import UIKit
 import SnapKit
 
-class CashTicketView: UITableViewCell {
+class CashTicketView: UIView {
     
-    // 테이블 뷰 셀 초기화 작업
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setStyle()
-        setLayOut()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        style()
+        loadView()
     }
     
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setStyle()
-        setLayOut()
+        style()
+        loadView()
     }
     
     // 0. 티켓 이미지
@@ -77,14 +75,12 @@ class CashTicketView: UITableViewCell {
         return money
     }()
     
-    private func setStyle() {
+    func style() {
         self.backgroundColor = UIColor(named: "darkest")
         self.layer.cornerRadius = 5
-        separatorInset.left = 0
-        selectionStyle = .none
     }
     
-    private func setLayOut() {
+    private func loadView() {
         
         [card, ticket, none, cash, tvingCash, money].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -128,6 +124,8 @@ class CashTicketView: UITableViewCell {
             $0.centerY.equalTo(cash.snp.centerY)
             $0.trailing.equalTo(none.snp.trailing)
         }
+        
+        self.frame = bounds
     }
     
 }
