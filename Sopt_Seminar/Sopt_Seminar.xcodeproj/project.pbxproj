@@ -53,6 +53,9 @@
 		F4BE7DE92A06283200688732 /* NetworkResult<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */; };
 		F4BE7DEB2A06291500688732 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DEA2A06291500688732 /* SignUpService.swift */; };
 		F4BE7DED2A062C3800688732 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DEC2A062C3800688732 /* NetworkViewController.swift */; };
+		F4BE7E272A069A4000688732 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E232A069A4000688732 /* WeatherViewController.swift */; };
+		F4BE7E282A069A4000688732 /* Config_w.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E242A069A4000688732 /* Config_w.swift */; };
+		F4BE7E292A069A4000688732 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E252A069A4000688732 /* WeatherService.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -108,6 +111,9 @@
 		F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkResult<T>.swift"; sourceTree = "<group>"; };
 		F4BE7DEA2A06291500688732 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		F4BE7DEC2A062C3800688732 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		F4BE7E232A069A4000688732 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		F4BE7E242A069A4000688732 /* Config_w.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config_w.swift; sourceTree = "<group>"; };
+		F4BE7E252A069A4000688732 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +303,8 @@
 		F4BE7DE22A0618A900688732 /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */,
+				F4BE7E222A06947C00688732 /* WeatherNetwork */,
 				F4BE7E202A06917000688732 /* SignInNetwork */,
 			);
 			path = Week4;
@@ -306,11 +314,20 @@
 			isa = PBXGroup;
 			children = (
 				F4BE7DE62A06240400688732 /* Config.swift */,
-				F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */,
 				F4BE7DEA2A06291500688732 /* SignUpService.swift */,
 				F4BE7DEC2A062C3800688732 /* NetworkViewController.swift */,
 			);
 			path = SignInNetwork;
+			sourceTree = "<group>";
+		};
+		F4BE7E222A06947C00688732 /* WeatherNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E242A069A4000688732 /* Config_w.swift */,
+				F4BE7E232A069A4000688732 /* WeatherViewController.swift */,
+				F4BE7E252A069A4000688732 /* WeatherService.swift */,
+			);
+			path = WeatherNetwork;
 			sourceTree = "<group>";
 		};
 		F4DDC4A32A03D1B900E97D1A /* Login */ = {
@@ -429,6 +446,7 @@
 				F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */,
 				F4BE7DE72A06240400688732 /* Config.swift in Sources */,
 				F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */,
+				F4BE7E272A069A4000688732 /* WeatherViewController.swift in Sources */,
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
 				F4064F7F29E1387D006BB626 /* SecondViewController_Closure.swift in Sources */,
@@ -455,12 +473,14 @@
 				F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */,
 				F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */,
 				F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */,
+				F4BE7E292A069A4000688732 /* WeatherService.swift in Sources */,
 				F4F7863B29F12B72002E2A61 /* UIImage+.swift in Sources */,
 				F4BE7DED2A062C3800688732 /* NetworkViewController.swift in Sources */,
 				F470038129F3ACCC0034E787 /* BaseView.swift in Sources */,
 				F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */,
 				F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */,
 				F470039029F3BD600034E787 /* NSObject+.swift in Sources */,
+				F4BE7E282A069A4000688732 /* Config_w.swift in Sources */,
 				F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */,
 				F470038829F3B2C00034E787 /* CarrotTableViewCell.swift in Sources */,
 				F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */,
@@ -607,6 +627,7 @@
 		F44B4E4029D7FA2A003658CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_Key = 0d268b100aab2067be1aeebe6b626058;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BASE_URL = "http://54.180.123.11";
@@ -630,12 +651,14 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				Weather_URL = "https://api.openweathermap.org/data/2.5/weather?";
 			};
 			name = Debug;
 		};
 		F44B4E4129D7FA2A003658CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_Key = 0d268b100aab2067be1aeebe6b626058;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BASE_URL = "http://54.180.123.11";
@@ -659,6 +682,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				Weather_URL = "https://api.openweathermap.org/data/2.5/weather?";
 			};
 			name = Release;
 		};
