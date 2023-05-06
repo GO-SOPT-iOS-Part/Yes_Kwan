@@ -48,6 +48,11 @@
 		F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */; };
 		F4B5F9402A051491008DA7B7 /* AnotherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F93F2A051491008DA7B7 /* AnotherTableViewCell.swift */; };
 		F4B5F9422A052D83008DA7B7 /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B5F9412A052D83008DA7B7 /* LogOutButtonView.swift */; };
+		F4BE7DE52A0618EC00688732 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4BE7DE42A0618EC00688732 /* Alamofire */; };
+		F4BE7DE72A06240400688732 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DE62A06240400688732 /* Config.swift */; };
+		F4BE7DE92A06283200688732 /* NetworkResult<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */; };
+		F4BE7DEB2A06291500688732 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DEA2A06291500688732 /* SignUpService.swift */; };
+		F4BE7DED2A062C3800688732 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7DEC2A062C3800688732 /* NetworkViewController.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -99,6 +104,10 @@
 		F4B5F93D2A0508C5008DA7B7 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		F4B5F93F2A051491008DA7B7 /* AnotherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTableViewCell.swift; sourceTree = "<group>"; };
 		F4B5F9412A052D83008DA7B7 /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
+		F4BE7DE62A06240400688732 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkResult<T>.swift"; sourceTree = "<group>"; };
+		F4BE7DEA2A06291500688732 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		F4BE7DEC2A062C3800688732 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4064F8229E13E47006BB626 /* SnapKit in Frameworks */,
+				F4BE7DE52A0618EC00688732 /* Alamofire in Frameworks */,
 				F4064F8529E141DC006BB626 /* Then in Frameworks */,
 				F4064F8829E14277006BB626 /* Inject in Frameworks */,
 			);
@@ -215,6 +225,7 @@
 				F4064F7129E133DB006BB626 /* Week1 */,
 				F4064F7229E133E3006BB626 /* Week2 */,
 				F470037929F3A4EA0034E787 /* Week3 */,
+				F4BE7DE22A0618A900688732 /* Week4 */,
 				F44B4E3929D7FA2A003658CD /* LaunchScreen.storyboard */,
 				F44B4E3729D7FA2A003658CD /* Assets.xcassets */,
 				F44B4E3C29D7FA2A003658CD /* Info.plist */,
@@ -283,6 +294,25 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		F4BE7DE22A0618A900688732 /* Week4 */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E202A06917000688732 /* SignInNetwork */,
+			);
+			path = Week4;
+			sourceTree = "<group>";
+		};
+		F4BE7E202A06917000688732 /* SignInNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7DE62A06240400688732 /* Config.swift */,
+				F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */,
+				F4BE7DEA2A06291500688732 /* SignUpService.swift */,
+				F4BE7DEC2A062C3800688732 /* NetworkViewController.swift */,
+			);
+			path = SignInNetwork;
+			sourceTree = "<group>";
+		};
 		F4DDC4A32A03D1B900E97D1A /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +363,7 @@
 				F4064F8129E13E47006BB626 /* SnapKit */,
 				F4064F8429E141DC006BB626 /* Then */,
 				F4064F8729E14277006BB626 /* Inject */,
+				F4BE7DE42A0618EC00688732 /* Alamofire */,
 			);
 			productName = Sopt_Seminar;
 			productReference = F44B4E2B29D7FA29003658CD /* Sopt_Seminar.app */;
@@ -366,6 +397,7 @@
 				F4064F8029E13E47006BB626 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F4064F8329E141DC006BB626 /* XCRemoteSwiftPackageReference "Then" */,
 				F4064F8629E14277006BB626 /* XCRemoteSwiftPackageReference "Inject" */,
+				F4BE7DE32A0618EC00688732 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = F44B4E2C29D7FA29003658CD /* Products */;
 			projectDirPath = "";
@@ -395,6 +427,7 @@
 			files = (
 				F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */,
 				F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */,
+				F4BE7DE72A06240400688732 /* Config.swift in Sources */,
 				F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */,
 				F4064F8E29E14988006BB626 /* SecondViewController_Ex1.swift in Sources */,
 				F4064F7629E134BF006BB626 /* SecondViewController_DelegatePtn.swift in Sources */,
@@ -408,10 +441,12 @@
 				F4064F7829E13543006BB626 /* DataBindProtocol.swift in Sources */,
 				F4064F7D29E13873006BB626 /* FirstViewController_Closure.swift in Sources */,
 				F49F47AA2A00BE25006379C7 /* CarrotViewController.swift in Sources */,
+				F4BE7DEB2A06291500688732 /* SignUpService.swift in Sources */,
 				F4064F7429E1340D006BB626 /* FirstViewController_DelegatePtn.swift in Sources */,
 				F4F7863729F10F94002E2A61 /* String+.swift in Sources */,
 				F470037F29F3ABCC0034E787 /* BaseViewController.swift in Sources */,
 				F44B4E2F29D7FA29003658CD /* AppDelegate.swift in Sources */,
+				F4BE7DE92A06283200688732 /* NetworkResult<T>.swift in Sources */,
 				F470038A29F3B6DB0034E787 /* UIView + Extension.swift in Sources */,
 				F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */,
 				F4B5F92A2A04944C008DA7B7 /* ADView.swift in Sources */,
@@ -421,6 +456,7 @@
 				F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */,
 				F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */,
 				F4F7863B29F12B72002E2A61 /* UIImage+.swift in Sources */,
+				F4BE7DED2A062C3800688732 /* NetworkViewController.swift in Sources */,
 				F470038129F3ACCC0034E787 /* BaseView.swift in Sources */,
 				F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */,
 				F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */,
@@ -573,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://54.180.123.11";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66PR7H87SL;
@@ -601,6 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://54.180.123.11";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66PR7H87SL;
@@ -672,6 +710,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		F4BE7DE32A0618EC00688732 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -689,6 +735,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4064F8629E14277006BB626 /* XCRemoteSwiftPackageReference "Inject" */;
 			productName = Inject;
+		};
+		F4BE7DE42A0618EC00688732 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4BE7DE32A0618EC00688732 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
