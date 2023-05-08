@@ -19,6 +19,7 @@ class LogOutButtonView: UITableViewCell {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         button.layer.cornerRadius = 5
         button.titleLabel?.textColor = UIColor(named: "textColor")
+        button.addTarget(self, action: #selector(logOut), for: .touchUpInside)
         return button
     }()
     
@@ -66,6 +67,12 @@ class LogOutButtonView: UITableViewCell {
     
     func setText(_ target: String) {
         logOutButton.setTitle(target, for: .normal)
+    }
+    
+    @objc
+    func logOut() {
+        // 로그아웃 여부 저장
+        UserDefaults.standard.set(LoginState.logOut.rawValue, forKey: "loginState")
     }
     
 }

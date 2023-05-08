@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LoginState {
+enum LoginState: String {
     case logIn
     case logOut
 }
