@@ -14,6 +14,8 @@ class LoginSuccessViewController: UIViewController {
     // 로그인하기 버튼을 통해 전달된 이메일을 받을 변수
     var userEmail: String = ""
     
+    var window: UIWindow?
+    
     // 1. TVING image
     private let logoImg: UIImageView = {
         let logo = UIImageView()
