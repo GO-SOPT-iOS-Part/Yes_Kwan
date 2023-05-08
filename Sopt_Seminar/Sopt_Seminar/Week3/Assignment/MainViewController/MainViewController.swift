@@ -13,9 +13,9 @@ class MainViewController: UIViewController {
     // SubViews
     private let homeViewController = HomeViewController()
     private let realTimeViewController = RealTimeViewController()
-    
-    // optional VC (default: mainViewController)
-    private lazy var targetVC: UIViewController = homeViewController
+    private let tvViewController = TVViewController()
+    private let movieViewController = MovieViewController()
+    private let paramountViewController = ParamountViewController()
     
     // 1. BarleftButton
     lazy private var leftButton: UIBarButtonItem = {
@@ -70,14 +70,40 @@ class MainViewController: UIViewController {
         }
     }
     
+    
     @objc func indexChanged(_ sender: UISegmentedControl) {
-        
-        // 변경될 VC 지정
+
         switch sender.selectedSegmentIndex {
         case 0:
-            targetVC = homeViewController
+            realTimeViewController.view.isHidden = true
+            homeViewController.view.isHidden = false
+            tvViewController.view.isHidden = true
+            movieViewController.view.isHidden = true
+            paramountViewController.view.isHidden = true
+        case 1:
+            realTimeViewController.view.isHidden = false
+            homeViewController.view.isHidden = true
+            tvViewController.view.isHidden = true
+            movieViewController.view.isHidden = true
+            paramountViewController.view.isHidden = true
+        case 2:
+            realTimeViewController.view.isHidden = true
+            homeViewController.view.isHidden = true
+            tvViewController.view.isHidden = false
+            movieViewController.view.isHidden = true
+            paramountViewController.view.isHidden = true
+        case 3:
+            realTimeViewController.view.isHidden = true
+            homeViewController.view.isHidden = true
+            tvViewController.view.isHidden = true
+            movieViewController.view.isHidden = false
+            paramountViewController.view.isHidden = true
         default:
-            targetVC = realTimeViewController
+            realTimeViewController.view.isHidden = true
+            homeViewController.view.isHidden = true
+            tvViewController.view.isHidden = true
+            movieViewController.view.isHidden = true
+            paramountViewController.view.isHidden = false
         }
         
     }
@@ -90,15 +116,35 @@ extension MainViewController {
     
     func setLayOut() {
         
-        [targetVC.view, segmentedControl].forEach {
+        [homeViewController.view, realTimeViewController.view, tvViewController.view, movieViewController.view, paramountViewController.view, segmentedControl].forEach {
             view.addSubview($0)
         }
         
         NSLayoutConstraint.activate([
-            targetVC.view.topAnchor.constraint(equalTo: view.topAnchor),
-            targetVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            targetVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            targetVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            homeViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            homeViewController.view.bottomAnchor.constraint(equalTo: view.topAnchor),
+            homeViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            homeViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            realTimeViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            realTimeViewController.view.bottomAnchor.constraint(equalTo: view.topAnchor),
+            realTimeViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            realTimeViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            tvViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            tvViewController.view.bottomAnchor.constraint(equalTo: view.topAnchor),
+            tvViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tvViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            movieViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            movieViewController.view.bottomAnchor.constraint(equalTo: view.topAnchor),
+            movieViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            movieViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            paramountViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            paramountViewController.view.bottomAnchor.constraint(equalTo: view.topAnchor),
+            paramountViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            paramountViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     
         segmentedControl.snp.makeConstraints {
@@ -119,8 +165,15 @@ extension MainViewController {
             ],
             for: .selected
         )
-        self.segmentedControl.addTarget(self, action: #selector(indexChanged(_:)), for: .valueChanged)
         self.segmentedControl.selectedSegmentIndex = 0
+        
+        realTimeViewController.view.isHidden = true
+        homeViewController.view.isHidden = false
+        tvViewController.view.isHidden = true
+        movieViewController.view.isHidden = true
+        paramountViewController.view.isHidden = true
+        
+        self.segmentedControl.addTarget(self, action: #selector(indexChanged), for: .valueChanged)
     }
     
     @objc
