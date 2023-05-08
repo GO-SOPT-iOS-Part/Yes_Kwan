@@ -58,6 +58,9 @@
 		F4BE7E292A069A4000688732 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E252A069A4000688732 /* WeatherService.swift */; };
 		F4BE7E2C2A09386900688732 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E2B2A09386900688732 /* UserInfo.swift */; };
 		F4BE7E2F2A09537400688732 /* LogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E2E2A09537400688732 /* LogOut.swift */; };
+		F4BE7E322A095B0A00688732 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E312A095B0A00688732 /* SegmentControl.swift */; };
+		F4BE7E352A09629B00688732 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E342A09629B00688732 /* HomeViewController.swift */; };
+		F4BE7E372A0962F500688732 /* RealTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E362A0962F500688732 /* RealTimeViewController.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -118,6 +121,9 @@
 		F4BE7E252A069A4000688732 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		F4BE7E2B2A09386900688732 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F4BE7E2E2A09537400688732 /* LogOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOut.swift; sourceTree = "<group>"; };
+		F4BE7E312A095B0A00688732 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		F4BE7E342A09629B00688732 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F4BE7E362A0962F500688732 /* RealTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeViewController.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -202,13 +208,11 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F4BE7E302A095A6F00688732 /* MainViewController */,
 				F4BE7E2D2A09535D00688732 /* Protocols */,
-				F4BE7E2B2A09386900688732 /* UserInfo.swift */,
-				F4E1E88E2A0233390040AEF7 /* MainViewController.swift */,
 				F4DDC4A42A03D1CC00E97D1A /* MyPage */,
 				F4DDC4A32A03D1B900E97D1A /* Login */,
 				F4F7863129EFB641002E2A61 /* Extensions */,
-				F49FCF4529F6CE22001DD6AD /* SheetView */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -339,14 +343,35 @@
 		F4BE7E2D2A09535D00688732 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F4BE7E2B2A09386900688732 /* UserInfo.swift */,
 				F4BE7E2E2A09537400688732 /* LogOut.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		F4BE7E302A095A6F00688732 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E332A09628500688732 /* SubViews */,
+				F4E1E88E2A0233390040AEF7 /* MainViewController.swift */,
+				F4BE7E312A095B0A00688732 /* SegmentControl.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		F4BE7E332A09628500688732 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E342A09629B00688732 /* HomeViewController.swift */,
+				F4BE7E362A0962F500688732 /* RealTimeViewController.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		F4DDC4A32A03D1B900E97D1A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F49FCF4529F6CE22001DD6AD /* SheetView */,
 				F4289C5129EE70A60045BEC8 /* LogInViewController.swift */,
 				F4F7863829F118E3002E2A61 /* LoginSuccessViewController.swift */,
 			);
@@ -491,10 +516,12 @@
 				F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */,
 				F4BE7E292A069A4000688732 /* WeatherService.swift in Sources */,
 				F4F7863B29F12B72002E2A61 /* UIImage+.swift in Sources */,
+				F4BE7E322A095B0A00688732 /* SegmentControl.swift in Sources */,
 				F4BE7DED2A062C3800688732 /* NetworkViewController.swift in Sources */,
 				F470038129F3ACCC0034E787 /* BaseView.swift in Sources */,
 				F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */,
 				F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */,
+				F4BE7E352A09629B00688732 /* HomeViewController.swift in Sources */,
 				F470039029F3BD600034E787 /* NSObject+.swift in Sources */,
 				F4BE7E282A069A4000688732 /* Config_w.swift in Sources */,
 				F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */,
@@ -503,6 +530,7 @@
 				F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */,
 				F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */,
 				F4B5F93B2A04FFFD008DA7B7 /* StackViewCell.swift in Sources */,
+				F4BE7E372A0962F500688732 /* RealTimeViewController.swift in Sources */,
 				F4B5F92E2A04A823008DA7B7 /* PurchaseViewController.swift in Sources */,
 				F4F7863929F118E3002E2A61 /* LoginSuccessViewController.swift in Sources */,
 				F4B5F9402A051491008DA7B7 /* AnotherTableViewCell.swift in Sources */,
