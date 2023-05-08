@@ -8,7 +8,9 @@
 import UIKit
 import SnapKit
 
-class LogOutButtonView: UITableViewCell {
+class LogOutButtonView: UITableViewCell, LogOut {
+    
+    var delegate: LogOut?
     
     // 로그아웃 버튼
     private lazy var logOutButton: UIButton = {
@@ -19,7 +21,6 @@ class LogOutButtonView: UITableViewCell {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         button.layer.cornerRadius = 5
         button.titleLabel?.textColor = UIColor(named: "textColor")
-        button.addTarget(self, action: #selector(logOut), for: .touchUpInside)
         return button
     }()
     
@@ -29,6 +30,7 @@ class LogOutButtonView: UITableViewCell {
         setStyle()
         setLayOut()
         layoutSubviews()
+        self.logOutButton.addTarget(self, action: #selector(logOut), for: .touchUpInside)
     }
     
     @available(*, unavailable)
@@ -72,7 +74,6 @@ class LogOutButtonView: UITableViewCell {
     @objc
     func logOut() {
         // 로그아웃 여부 저장
-        UserDefaults.standard.set(LoginState.logOut.rawValue, forKey: "loginState")
+        delegate?.logOut()
     }
-    
 }

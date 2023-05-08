@@ -40,6 +40,10 @@ class MainViewController: UIViewController {
 
         // NavigationItem 색상 지정
         self.navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         // 로그인 여부에 따라 다른 rightBarButton이 보이게끔 해주기
         if UserDefaults.standard.string(forKey: "loginState") == "logIn" {

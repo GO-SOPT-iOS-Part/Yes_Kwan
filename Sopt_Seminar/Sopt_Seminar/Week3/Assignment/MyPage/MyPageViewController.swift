@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewDelegate {
-    
+        
     let tableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = .black
@@ -54,6 +54,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewD
         self.navigationItem.rightBarButtonItems = [gear, bell]
         
         tableView.rowHeight = UITableView.automaticDimension
+        
     }
     
     
@@ -128,6 +129,7 @@ extension MyPageViewController: UITableViewDataSource {
         case 11:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LogOutButtonView.className, for: indexPath) as? LogOutButtonView else { return UITableViewCell() }
             cell.setText(dummy[indexPath.row])
+            cell.delegate = self
             return cell
             
         default:
@@ -150,3 +152,9 @@ extension MyPageViewController: UITableViewDataSource {
     }
 }
 
+extension MyPageViewController: LogOut {
+    func logOut() {
+        UserDefaults.standard.set(LoginState.logOut.rawValue, forKey: "loginState")
+        self.navigationController?.popViewController(animated: true)
+    }
+}
