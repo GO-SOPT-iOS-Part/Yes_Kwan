@@ -11,7 +11,7 @@ import SnapKit
 class PageViewController: UITableViewCell {
     
     // Poster 이미지 목록
-    private var items: [String] = ["poster1", "poster1", "poster1", "poster1", "poster1"]
+    private var items: [String] = ["poster1", "poster2", "poster1", "poster2", "poster1"]
     
     // init
     @available(*, unavailable)
