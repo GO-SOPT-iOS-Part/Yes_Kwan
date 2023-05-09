@@ -44,7 +44,7 @@ class PageViewController: UITableViewCell {
         
         grayDot.snp.makeConstraints {
             $0.top.equalTo(collectionView.snp.bottom).offset(10)
-            $0.leading.equalToSuperview().inset(10)
+            $0.leading.equalToSuperview().inset(-30)
         }
     }
     

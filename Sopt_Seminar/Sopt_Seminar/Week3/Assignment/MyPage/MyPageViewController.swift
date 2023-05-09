@@ -26,7 +26,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewD
         super.viewWillAppear(animated)
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .black
+        appearance.backgroundColor = .clear
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
     }
