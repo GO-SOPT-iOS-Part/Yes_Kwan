@@ -64,6 +64,8 @@
 		F4BE7E392A09820500688732 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E382A09820500688732 /* TVViewController.swift */; };
 		F4BE7E3B2A09820C00688732 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E3A2A09820C00688732 /* MovieViewController.swift */; };
 		F4BE7E3D2A09821500688732 /* ParamountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E3C2A09821500688732 /* ParamountViewController.swift */; };
+		F4BE7E402A0A68D300688732 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E3F2A0A68D300688732 /* PageViewController.swift */; };
+		F4BE7E452A0A923600688732 /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -130,6 +132,8 @@
 		F4BE7E382A09820500688732 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		F4BE7E3A2A09820C00688732 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		F4BE7E3C2A09821500688732 /* ParamountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamountViewController.swift; sourceTree = "<group>"; };
+		F4BE7E3F2A0A68D300688732 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -214,8 +218,8 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				F4BE7E302A095A6F00688732 /* MainViewController */,
 				F4BE7E2D2A09535D00688732 /* Protocols */,
+				F4BE7E302A095A6F00688732 /* MainViewController */,
 				F4DDC4A42A03D1CC00E97D1A /* MyPage */,
 				F4DDC4A32A03D1B900E97D1A /* Login */,
 				F4F7863129EFB641002E2A61 /* Extensions */,
@@ -368,13 +372,23 @@
 		F4BE7E332A09628500688732 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				F4BE7E342A09629B00688732 /* HomeViewController.swift */,
+				F4BE7E3E2A0A670800688732 /* HomeView */,
 				F4BE7E362A0962F500688732 /* RealTimeViewController.swift */,
 				F4BE7E382A09820500688732 /* TVViewController.swift */,
 				F4BE7E3A2A09820C00688732 /* MovieViewController.swift */,
 				F4BE7E3C2A09821500688732 /* ParamountViewController.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		F4BE7E3E2A0A670800688732 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */,
+				F4BE7E3F2A0A68D300688732 /* PageViewController.swift */,
+				F4BE7E342A09629B00688732 /* HomeViewController.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		F4DDC4A32A03D1B900E97D1A /* Login */ = {
@@ -502,6 +516,7 @@
 				F4BE7E2C2A09386900688732 /* UserInfo.swift in Sources */,
 				F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */,
 				F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */,
+				F4BE7E452A0A923600688732 /* PosterCollectionViewCell.swift in Sources */,
 				F4B5F9282A0414D9008DA7B7 /* CashTicketView.swift in Sources */,
 				F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */,
 				F470037B29F3A7AC0034E787 /* CommonView.swift in Sources */,
@@ -541,6 +556,7 @@
 				F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */,
 				F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */,
 				F4064F8C29E1485C006BB626 /* FirstViewController_Ex1.swift in Sources */,
+				F4BE7E402A0A68D300688732 /* PageViewController.swift in Sources */,
 				F4B5F93B2A04FFFD008DA7B7 /* StackViewCell.swift in Sources */,
 				F4BE7E372A0962F500688732 /* RealTimeViewController.swift in Sources */,
 				F4B5F92E2A04A823008DA7B7 /* PurchaseViewController.swift in Sources */,

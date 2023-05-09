@@ -10,3 +10,7 @@ import Foundation
 protocol LogOut: AnyObject {
     func logOut()
 }
+
+protocol tableChange: AnyObject {
+    func changePoster()
+}

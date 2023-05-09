@@ -77,18 +77,17 @@ extension MyPageViewController {
         }
     }
     
-    func viewSetting() {
+    private func viewSetting() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func setLayOut() {
+    private func setLayOut() {
         tableView.snp.makeConstraints {
             $0.width.equalToSuperview()
             $0.center.equalToSuperview()
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview()
-            
         }
     }
     
