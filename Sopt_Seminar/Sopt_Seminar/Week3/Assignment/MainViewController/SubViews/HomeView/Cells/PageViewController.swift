@@ -112,6 +112,3 @@ extension PageViewController: UICollectionViewDataSource {
         return cell
     }
 }
-
-
-

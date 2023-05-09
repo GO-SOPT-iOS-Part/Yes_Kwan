@@ -305,7 +305,7 @@
 			path = SheetView;
 			sourceTree = "<group>";
 		};
-		F4B5F9312A04AB5A008DA7B7 /* SubViews */ = {
+		F4B5F9312A04AB5A008DA7B7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				F4B5F93A2A04FFFD008DA7B7 /* StackViewCell.swift */,
@@ -317,7 +317,7 @@
 				F4B5F93F2A051491008DA7B7 /* AnotherTableViewCell.swift */,
 				F4B5F9412A052D83008DA7B7 /* LogOutButtonView.swift */,
 			);
-			path = SubViews;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F4BE7DE22A0618A900688732 /* Week4 */ = {
@@ -384,11 +384,19 @@
 		F4BE7E3E2A0A670800688732 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */,
-				F4BE7E3F2A0A68D300688732 /* PageViewController.swift */,
+				F4BE7E4B2A0ABC2800688732 /* Cells */,
 				F4BE7E342A09629B00688732 /* HomeViewController.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		F4BE7E4B2A0ABC2800688732 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E3F2A0A68D300688732 /* PageViewController.swift */,
+				F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F4DDC4A32A03D1B900E97D1A /* Login */ = {
@@ -404,7 +412,7 @@
 		F4DDC4A42A03D1CC00E97D1A /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				F4B5F9312A04AB5A008DA7B7 /* SubViews */,
+				F4B5F9312A04AB5A008DA7B7 /* Cells */,
 				F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */,
 				F4B5F92D2A04A823008DA7B7 /* PurchaseViewController.swift */,
 			);
