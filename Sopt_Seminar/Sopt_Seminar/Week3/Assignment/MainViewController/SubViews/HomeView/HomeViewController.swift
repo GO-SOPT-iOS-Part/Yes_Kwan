@@ -10,9 +10,6 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
-    // Poster 이미지 목록
-    private var items: [String] = ["poster1", "poster1", "poster1", "poster1", "poster1"]
-    
     // 1. 테이블뷰 생성
     private let tableView: UITableView = {
         let table = UITableView()
@@ -40,6 +37,7 @@ class HomeViewController: UIViewController {
         
         tableView.do {
             $0.register(PageViewController.self, forCellReuseIdentifier: PageViewController.className)
+            $0.register(MovieTableViewCell.self, forCellReuseIdentifier: MovieTableViewCell.className)
             
             $0.delegate = self
             $0.dataSource = self
@@ -61,13 +59,16 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-        default:
+        case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PageViewController.className, for: indexPath) as? PageViewController else { return UITableViewCell() }
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.className, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
             return cell
         }
     }

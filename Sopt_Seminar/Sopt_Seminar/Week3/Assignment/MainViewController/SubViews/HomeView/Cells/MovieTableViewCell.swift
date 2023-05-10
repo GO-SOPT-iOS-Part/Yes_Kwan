@@ -1,18 +1,17 @@
 //
-//  PageViewController.swift
+//  MovieTableViewCell.swift
 //  Sopt_Seminar
 //
-//  Created by 김응관 on 2023/05/09.
+//  Created by 김응관 on 2023/05/10.
 //
 
 import UIKit
-import SnapKit
 
-class PageViewController: UITableViewCell {
+class MovieTableViewCell: UITableViewCell {
     
     // Poster 이미지 목록
-    private var items: [String] = ["poster1", "poster2", "poster1", "poster2", "poster1"]
-    
+    private var items: [String] = ["movie1", "movie2", "movie3", "movie1", "movie2"]
+
     // init
     @available(*, unavailable)
     required init?(coder: NSCoder) {
@@ -33,18 +32,28 @@ class PageViewController: UITableViewCell {
     
     // layout setting + addSubView
     private func setLayOut() {
+        contentView.addSubview(header)
+        contentView.addSubview(linkBtn)
         contentView.addSubview(collectionView)
-        contentView.addSubview(grayDot)
         
-        collectionView.snp.makeConstraints {
-            $0.top.leading.trailing.bottom.equalToSuperview()
-            $0.width.equalToSuperview()
-            $0.height.equalTo(510)
+        header.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.height.equalTo(22.5)
         }
         
-        grayDot.snp.makeConstraints {
-            $0.top.equalTo(collectionView.snp.bottom).offset(10)
-            $0.leading.equalToSuperview().inset(-30)
+        linkBtn.snp.makeConstraints {
+            $0.trailing.equalToSuperview()
+            $0.top.equalTo(header.snp.top)
+            $0.height.equalTo(20)
+            $0.centerY.equalTo(header.snp.centerY)
+        }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(linkBtn.snp.bottom).offset(20)
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(146)
         }
     }
     
@@ -52,9 +61,9 @@ class PageViewController: UITableViewCell {
     private let collectionViewFlowLayout: UICollectionViewFlowLayout = {
         let flow = UICollectionViewFlowLayout()
         flow.scrollDirection = .horizontal
-        flow.minimumLineSpacing = 0.0
-        flow.minimumInteritemSpacing = 0.0
-        flow.itemSize = .init(width: UIScreen.main.bounds.width, height: 510.0)
+        flow.minimumLineSpacing = 10.0
+        flow.minimumInteritemSpacing = 10.0
+        flow.itemSize = .init(width: 98, height: 146.0)
         flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return flow
     }()
@@ -69,34 +78,34 @@ class PageViewController: UITableViewCell {
         view.contentInset = .zero
         view.backgroundColor = .clear
         view.clipsToBounds = true
-        view.register(PosterCollectionViewCell.self, forCellWithReuseIdentifier: PosterCollectionViewCell.className)
+        view.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: MovieCollectionViewCell.className)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isPagingEnabled = true
         return view
     }()
     
-    // UIPageControl 객체 생성
-    private lazy var grayDot: UIPageControl = {
-        let dot = UIPageControl()
-        dot.translatesAutoresizingMaskIntoConstraints = false
-        dot.numberOfPages = items.count
-        dot.hidesForSinglePage = true
-        dot.currentPageIndicatorTintColor = .systemGray
-        dot.pageIndicatorTintColor = .white
-        return dot
+    // 0. Header - "티빙에서 꼭 봐야하는 콘텐츠"
+    private let header: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "티빙에서 꼭 봐야하는 콘텐츠"
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 15)
+        return label
     }()
     
-}
-    
-extension PageViewController: UICollectionViewDelegate {
-    // Dot 색깔 페이지에 맞게 바뀌게끔 해주는 함수
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let width = scrollView.bounds.size.width
-        grayDot.currentPage = Int(scrollView.contentOffset.x / width)
-    }
+    // 1. Header - "전체보기>"
+    private let linkBtn: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("전체보기 >", for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        btn.tintColor = UIColor(named: "darkest")
+        return btn
+    }()
 }
 
-extension PageViewController: UICollectionViewDataSource {
+extension MovieTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     // CollectionView 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -106,14 +115,10 @@ extension PageViewController: UICollectionViewDataSource {
     // 반환 cell 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.className, for: indexPath) as! PosterCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.className, for: indexPath) as! MovieCollectionViewCell
         
         cell.setImage(items[indexPath.row])
         return cell
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0))
-    }
 }
+

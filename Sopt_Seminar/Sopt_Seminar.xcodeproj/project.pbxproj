@@ -66,6 +66,8 @@
 		F4BE7E3D2A09821500688732 /* ParamountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E3C2A09821500688732 /* ParamountViewController.swift */; };
 		F4BE7E402A0A68D300688732 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E3F2A0A68D300688732 /* PageViewController.swift */; };
 		F4BE7E452A0A923600688732 /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */; };
+		F4BE7E4D2A0AC10600688732 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E4C2A0AC10600688732 /* MovieCollectionViewCell.swift */; };
+		F4BE7E4F2A0AC12200688732 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE7E4E2A0AC12200688732 /* MovieTableViewCell.swift */; };
 		F4DDC4A82A03FA8600E97D1A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */; };
 		F4E1E88F2A0233390040AEF7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E88E2A0233390040AEF7 /* MainViewController.swift */; };
 		F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */; };
@@ -134,6 +136,8 @@
 		F4BE7E3C2A09821500688732 /* ParamountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamountViewController.swift; sourceTree = "<group>"; };
 		F4BE7E3F2A0A68D300688732 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4BE7E4C2A0AC10600688732 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4BE7E4E2A0AC12200688732 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		F4DDC4A72A03FA8600E97D1A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F4E1E88E2A0233390040AEF7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4E1E8902A023A0E0040AEF7 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 			children = (
 				F4BE7E3F2A0A68D300688732 /* PageViewController.swift */,
 				F4BE7E442A0A923600688732 /* PosterCollectionViewCell.swift */,
+				F4BE7E4C2A0AC10600688732 /* MovieCollectionViewCell.swift */,
+				F4BE7E4E2A0AC12200688732 /* MovieTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			files = (
 				F44B4E3329D7FA29003658CD /* ViewController.swift in Sources */,
 				F4F7863329EFB652002E2A61 /* UIButton+.swift in Sources */,
+				F4BE7E4F2A0AC12200688732 /* MovieTableViewCell.swift in Sources */,
 				F4BE7DE72A06240400688732 /* Config.swift in Sources */,
 				F4BE7E3B2A09820C00688732 /* MovieViewController.swift in Sources */,
 				F4289C5229EE70A60045BEC8 /* LogInViewController.swift in Sources */,
@@ -555,6 +562,7 @@
 				F470038129F3ACCC0034E787 /* BaseView.swift in Sources */,
 				F470038E29F3B8460034E787 /* UIImage + Extension.swift in Sources */,
 				F49FCF4229F6BBE0001DD6AD /* SheetViewController.swift in Sources */,
+				F4BE7E4D2A0AC10600688732 /* MovieCollectionViewCell.swift in Sources */,
 				F4BE7E352A09629B00688732 /* HomeViewController.swift in Sources */,
 				F470039029F3BD600034E787 /* NSObject+.swift in Sources */,
 				F4BE7E392A09820500688732 /* TVViewController.swift in Sources */,
