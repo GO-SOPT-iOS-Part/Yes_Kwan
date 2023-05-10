@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
             // 3.
             // 뷰 사이의 계층구조를 탐색하게 해주는 스택 형태의 Container ViewController
-                let navigationController = UINavigationController(rootViewController: WeatherViewController())
+                let navigationController = UINavigationController(rootViewController: MainViewController())
                 self.window?.rootViewController = navigationController
             // 4.
                 self.window?.makeKeyAndVisible()

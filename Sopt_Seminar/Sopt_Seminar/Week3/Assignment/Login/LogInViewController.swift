@@ -15,12 +15,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     var nickName: String = ""
     
     // 1. chevron backward SF Symbols
-    private let chevron: UIImageView = {
-        let img = UIImageView()
-        img.image = UIImage(systemName: "chevron.backward")
-        img.tintColor = UIColor.white
-        return img
-    }()
+//    private let chevron: UIImageView = {
+//        let img = UIImageView()
+//        img.image = UIImage(systemName: "chevron.backward")
+//        img.tintColor = UIColor.white
+//        return img
+//    }()
     
     // 2. TVING ID 로그인 문구
     private let guideLabel: UILabel = {
@@ -122,6 +122,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            
         style()
         setLayOut()
         
@@ -143,6 +144,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         pwTextField.delegate = self
         pwTextField.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .touchDown)
         pwTextField.addTarget(self, action: #selector(loginbtnActivate), for: .allEditingEvents)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
     
@@ -188,26 +195,18 @@ private extension LogInViewController {
     // 오토레이아웃 지정
     func setLayOut() {
         
-        [chevron, guideLabel, idTextField, pwTextField, loginButton, idLabel, lindLabel, pwLabel, questionLabel, nickNameButton].forEach {
+        [guideLabel, idTextField, pwTextField, loginButton, idLabel, lindLabel, pwLabel, questionLabel, nickNameButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
         
-        NSLayoutConstraint.activate([guideLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        NSLayoutConstraint.activate([
+            guideLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 135),
+            guideLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             lindLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             questionLabel.centerXAnchor.constraint(equalTo: idLabel.centerXAnchor),
             nickNameButton.centerYAnchor.constraint(equalTo: questionLabel.centerYAnchor)])
         
-        chevron.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(15)
-            $0.top.equalToSuperview().offset(100)
-            $0.height.equalTo(24)
-            $0.width.equalTo(15)
-        }
-        
-        guideLabel.snp.makeConstraints {
-            $0.top.equalTo(chevron.snp.top).offset(35)
-        }
         
         idTextField.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(15)
@@ -264,6 +263,9 @@ private extension LogInViewController {
             guard let mails = idTextField.text else { return }
             loginSuccessViewController.userEmail = mails + " 님"
         }
+        
+        // 로그인 여부 저장
+        UserDefaults.standard.set(LoginState.logIn.rawValue, forKey: "loginState")
         
         // 화면이동
         self.navigationController?.pushViewController(loginSuccessViewController, animated: true)

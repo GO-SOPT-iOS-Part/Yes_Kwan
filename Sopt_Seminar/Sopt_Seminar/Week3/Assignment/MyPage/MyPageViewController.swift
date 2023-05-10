@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewDelegate {
-    
+        
     let tableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = .black
@@ -26,7 +26,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewD
         super.viewWillAppear(animated)
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .black
+        appearance.backgroundColor = .clear
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
     }
@@ -54,6 +54,7 @@ class MyPageViewController: UIViewController, UITableViewDelegate, UIScrollViewD
         self.navigationItem.rightBarButtonItems = [gear, bell]
         
         tableView.rowHeight = UITableView.automaticDimension
+        
     }
     
     
@@ -76,18 +77,17 @@ extension MyPageViewController {
         }
     }
     
-    func viewSetting() {
+    private func viewSetting() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func setLayOut() {
+    private func setLayOut() {
         tableView.snp.makeConstraints {
             $0.width.equalToSuperview()
             $0.center.equalToSuperview()
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview()
-            
         }
     }
     
@@ -128,6 +128,7 @@ extension MyPageViewController: UITableViewDataSource {
         case 11:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LogOutButtonView.className, for: indexPath) as? LogOutButtonView else { return UITableViewCell() }
             cell.setText(dummy[indexPath.row])
+            cell.delegate = self
             return cell
             
         default:
@@ -150,3 +151,9 @@ extension MyPageViewController: UITableViewDataSource {
     }
 }
 
+extension MyPageViewController: LogOut {
+    func logOut() {
+        UserDefaults.standard.set(LoginState.logOut.rawValue, forKey: "loginState")
+        self.navigationController?.popViewController(animated: true)
+    }
+}
