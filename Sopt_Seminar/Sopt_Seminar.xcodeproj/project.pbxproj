@@ -230,12 +230,10 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F4587CB82A0D886600F56BCD /* ViewController */,
 				F4587CB62A0D87D700F56BCD /* Model */,
 				F4587CAA2A0D4B5F00F56BCD /* Network */,
 				F4BE7E2D2A09535D00688732 /* Protocols */,
-				F4BE7E302A095A6F00688732 /* MainViewController */,
-				F4DDC4A42A03D1CC00E97D1A /* MyPage */,
-				F4DDC4A32A03D1B900E97D1A /* Login */,
 				F4F7863129EFB641002E2A61 /* Extensions */,
 			);
 			name = Assignment;
@@ -299,6 +297,16 @@
 				F4BE7E202A06917000688732 /* SignInNetwork */,
 			);
 			path = Practice;
+			sourceTree = "<group>";
+		};
+		F4587CB82A0D886600F56BCD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7E302A095A6F00688732 /* MainViewController */,
+				F4DDC4A42A03D1CC00E97D1A /* MyPage */,
+				F4DDC4A32A03D1B900E97D1A /* Login */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F470037929F3A4EA0034E787 /* Week3 */ = {

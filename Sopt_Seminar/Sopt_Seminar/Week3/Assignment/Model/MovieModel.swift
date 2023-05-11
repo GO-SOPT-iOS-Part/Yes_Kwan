@@ -55,6 +55,7 @@ enum OriginalLanguage: String, Codable {
     case fr = "fr"
 }
 
+// 영화 포스터 객체를 생성하기 위한 구조체
 struct Movie {
     let url: String
 }
