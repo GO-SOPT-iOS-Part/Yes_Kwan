@@ -27,7 +27,6 @@
 		F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */; };
 		F4587CAC2A0D511600F56BCD /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4587CAB2A0D511600F56BCD /* MovieService.swift */; };
 		F4587CAE2A0D546400F56BCD /* MovieConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4587CAD2A0D546400F56BCD /* MovieConfig.swift */; };
-		F4587CB02A0D569F00F56BCD /* MoviePosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4587CAF2A0D569F00F56BCD /* MoviePosterViewController.swift */; };
 		F4587CB22A0D5E1200F56BCD /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4587CB12A0D5E1200F56BCD /* MovieModel.swift */; };
 		F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470034D29F26AF80034E787 /* NicknameViewController.swift */; };
 		F470037B29F3A7AC0034E787 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037A29F3A7AC0034E787 /* CommonView.swift */; };
@@ -102,7 +101,6 @@
 		F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController2.swift; sourceTree = "<group>"; };
 		F4587CAB2A0D511600F56BCD /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		F4587CAD2A0D546400F56BCD /* MovieConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieConfig.swift; sourceTree = "<group>"; };
-		F4587CAF2A0D569F00F56BCD /* MoviePosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterViewController.swift; sourceTree = "<group>"; };
 		F4587CB12A0D5E1200F56BCD /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		F470034D29F26AF80034E787 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		F470037A29F3A7AC0034E787 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 			children = (
 				F4587CAB2A0D511600F56BCD /* MovieService.swift */,
 				F4587CAD2A0D546400F56BCD /* MovieConfig.swift */,
-				F4587CAF2A0D569F00F56BCD /* MoviePosterViewController.swift */,
 				F4587CB12A0D5E1200F56BCD /* MovieModel.swift */,
 			);
 			path = Network;
@@ -575,7 +572,6 @@
 				F470039529F3C0470034E787 /* Photo.swift in Sources */,
 				F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */,
 				F4B5F9332A04BA0E008DA7B7 /* SettingTableViewCell.swift in Sources */,
-				F4587CB02A0D569F00F56BCD /* MoviePosterViewController.swift in Sources */,
 				F44B4E3129D7FA29003658CD /* SceneDelegate.swift in Sources */,
 				F470039729F3C0FF0034E787 /* PhotoCell.swift in Sources */,
 				F4BE7E292A069A4000688732 /* WeatherService.swift in Sources */,

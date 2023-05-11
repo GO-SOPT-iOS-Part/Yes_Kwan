@@ -23,6 +23,20 @@ class HomeViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
+    
+    // 2. 영화 정보 API 받아오는 함수
+    private func getMovie() {
+        MovieService.shared.getInfo(key: "75df104409445c36a314b12eb0aa5fdb", language: "ko", adult: false, video: false, page: 1) { response in
+            
+            switch response {
+            case .success(let data):
+                guard let data = data as? Welcome else { return }
+                dump(data)
+            default:
+                return
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +44,8 @@ class HomeViewController: UIViewController {
         setLayOut()
         
         tableView.rowHeight = UITableView.automaticDimension
+        
+        getMovie()
     }
     
     private func setStyle() {
