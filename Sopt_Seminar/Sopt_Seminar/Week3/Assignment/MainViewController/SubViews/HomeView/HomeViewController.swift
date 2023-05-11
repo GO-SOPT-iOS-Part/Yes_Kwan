@@ -10,6 +10,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
+    private var movieList: [Result] = []
+    
     // 1. 테이블뷰 생성
     private let tableView: UITableView = {
         let table = UITableView()
@@ -31,21 +33,21 @@ class HomeViewController: UIViewController {
             switch response {
             case .success(let data):
                 guard let data = data as? Welcome else { return }
-                dump(data)
+                self.movieList = data.results
             default:
                 return
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setStyle()
         setLayOut()
         
-        tableView.rowHeight = UITableView.automaticDimension
-        
         getMovie()
+        
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setStyle() {
@@ -87,5 +89,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.className, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
             return cell
         }
+    }
+}
+
+extension HomeViewController: getMovieData {
+    func getMovieData() -> [Result] {
+        return movieList
     }
 }

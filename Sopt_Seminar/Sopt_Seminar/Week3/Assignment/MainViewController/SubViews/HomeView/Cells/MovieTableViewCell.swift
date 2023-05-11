@@ -7,10 +7,13 @@
 
 import UIKit
 
-class MovieTableViewCell: UITableViewCell {
+class MovieTableViewCell: UITableViewCell, getMovieData {
+    
+    var movieDelegate: getMovieData?
     
     // Poster 이미지 목록
     private var items: [String] = ["movie1", "movie2", "movie3", "movie1", "movie2"]
+    private var datas: [Result]?
 
     // init
     @available(*, unavailable)
@@ -28,6 +31,8 @@ class MovieTableViewCell: UITableViewCell {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        datas = getMovieData()
     }
     
     // layout setting + addSubView
@@ -109,7 +114,7 @@ extension MovieTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     
     // CollectionView 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.items.count
+        self.datas?.count ?? 0
     }
     
     // 반환 cell 설정
@@ -117,8 +122,12 @@ extension MovieTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.className, for: indexPath) as! MovieCollectionViewCell
         
-        cell.setImage(items[indexPath.row])
+        cell.setImage(datas?[indexPath.row].posterPath ?? "movie1")
         return cell
+    }
+    
+    func getMovieData() -> [Result] {
+        movieDelegate?.getMovieData() ?? []
     }
 }
 

@@ -14,3 +14,7 @@ protocol LogOut: AnyObject {
 protocol tableChange: AnyObject {
     func changePoster()
 }
+
+protocol getMovieData: AnyObject {
+    func getMovieData() -> [Result]
+}
