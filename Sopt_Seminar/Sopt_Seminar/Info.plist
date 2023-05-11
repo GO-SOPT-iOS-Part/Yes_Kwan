@@ -6,6 +6,10 @@
 	<string>$(API_Key)</string>
 	<key>BASE_URL</key>
 	<string>$(BASE_URL)</string>
+	<key>MovieAPI_Key</key>
+	<string>$(MovieAPI_Key)</string>
+	<key>Movie_URL</key>
+	<string>$(Movie_URL)</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

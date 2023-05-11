@@ -30,6 +30,8 @@ final class MovieService {
         let dataRequest = AF.request(url, method: .get, headers: header)
         
         dataRequest.responseData { response in
+            print(response.result)
+
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
