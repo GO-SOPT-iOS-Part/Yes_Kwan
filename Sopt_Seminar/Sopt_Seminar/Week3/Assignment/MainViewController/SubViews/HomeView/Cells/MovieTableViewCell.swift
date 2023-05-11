@@ -9,6 +9,7 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     
+    // 현재 뷰에서 보이는 CollectionView상의 이미지 데이터 계속 reload
     var datas: [Movie] = [] {
         didSet {
             self.collectionView.reloadData()

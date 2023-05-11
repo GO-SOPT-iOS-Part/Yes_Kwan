@@ -10,6 +10,7 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
+    // reloadData 메서드를 통해 현재 뷰에 보이는 cell들 업데이트
     private var movieList: [Movie] = [] {
         didSet {
             self.tableView.reloadData()
@@ -38,6 +39,7 @@ class HomeViewController: UIViewController {
             case .success(let data):
                 guard let data = data as? Welcome else { return }
                 
+                // 데이터의 개수만큼 이미지 객체를 만들어 movieList 배열에 저장
                 for i in 0...(data.results.count)-1 {
                     let picPath = MovieConfig.imgURL + "/original" + data.results[i].posterPath
                     self.movieList.append(Movie(url: picPath))
@@ -96,6 +98,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.className, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
+            // movieList 배열을 cell에 전달
             cell.datas = movieList
             return cell
         }
