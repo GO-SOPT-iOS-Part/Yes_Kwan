@@ -56,7 +56,7 @@ final class MovieService {
     private func isValidData(data: Data) -> NetworkState<Any> {
         let decoder = JSONDecoder()
         
-        guard let decodedData = try? decoder.decode(Weathers.self, from: data)
+        guard let decodedData = try? decoder.decode(Welcome.self, from: data)
         else { return .pathErr }
         
         return .success(decodedData as Any)
