@@ -19,14 +19,13 @@ final class MovieService {
     //75df104409445c36a314b12eb0aa5fdb
     //ko
     
-    func getInfo(key: String, language: String, page: Int, completion: @escaping (NetworkState<Any>) -> Void) {
+    func getInfo(key: String, language: String, adult: Bool, video: Bool, page: Int, completion: @escaping (NetworkState<Any>) -> Void) {
         
         let header: HTTPHeaders = [
             "Content-Type": "application/json",
-            "Authorization": "Bearer 75df104409445c36a314b12eb0aa5fdb"
         ]
         
-        let url = MovieConfig.movieURL + "?language=\(language)&page=\(page)"
+        let url = MovieConfig.movieURL + "api_key=\(key)&include_adult=\(adult)&include_video=\(video)&language=\(language)&page=\(page)&sort_by=popularity.desc"
         
         let dataRequest = AF.request(url, method: .get, headers: header)
         
