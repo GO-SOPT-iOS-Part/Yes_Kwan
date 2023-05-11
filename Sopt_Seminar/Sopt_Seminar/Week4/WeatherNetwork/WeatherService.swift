@@ -15,6 +15,7 @@ final class WeatherService {
     private init() {}
     
     //q=seoul&appid=0d268b100aab2067be1aeebe6b626058
+    //https://api.themoviedb.org/3/discover/movie
 
     func getInfo(key: String,
                  city: String,
