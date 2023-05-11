@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
@@ -43,6 +44,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     // 5. 이미지 설정
     func setImage(_ name: String) {
-        poster.image = UIImage(named: name)?.resized(withPercentage: 3.0)
+        poster.kf.setImage(with: URL(string: name))
     }
 }

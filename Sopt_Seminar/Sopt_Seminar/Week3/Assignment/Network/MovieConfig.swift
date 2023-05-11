@@ -13,6 +13,7 @@ enum MovieConfig {
         enum Plist {
             static let movieURL = "Movie_URL"
             static let API_Key = "MovieAPI_Key"
+            static let imgURL = "Poster_URL"
         }
     }
     
@@ -39,4 +40,12 @@ extension MovieConfig {
         }
         return API_Key
     }()
+    
+    static let imgURL: String = {
+        guard let API_Key = MovieConfig.infoDictionary[Keys.Plist.imgURL] as? String else {
+            fatalError("Base URL is not set in plist for this configuration.")
+        }
+        return API_Key
+    }()
+    
 }

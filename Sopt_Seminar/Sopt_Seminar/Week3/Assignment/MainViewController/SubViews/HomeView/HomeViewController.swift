@@ -10,7 +10,11 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
-    private var movieList: [Result] = []
+    private var movieList: [Movie] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     // 1. 테이블뷰 생성
     private let tableView: UITableView = {
@@ -33,7 +37,12 @@ class HomeViewController: UIViewController {
             switch response {
             case .success(let data):
                 guard let data = data as? Welcome else { return }
-                self.movieList = data.results
+                
+                for i in 0...(data.results.count)-1 {
+                    let picPath = MovieConfig.imgURL + "/original" + data.results[i].posterPath
+                    self.movieList.append(Movie(url: picPath))
+                }
+                
             default:
                 return
             }
@@ -87,13 +96,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.className, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
+            cell.datas = movieList
             return cell
         }
-    }
-}
-
-extension HomeViewController: getMovieData {
-    func getMovieData() -> [Result] {
-        return movieList
     }
 }
