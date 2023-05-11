@@ -26,6 +26,7 @@
 		F44B4E4329D806BC003658CD /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4229D806BC003658CD /* PracticeViewController.swift */; };
 		F44B4E4529D80FC6003658CD /* PracticeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */; };
 		F4587CAC2A0D511600F56BCD /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4587CAB2A0D511600F56BCD /* MovieService.swift */; };
+		F4587CAE2A0D546400F56BCD /* MovieConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4587CAD2A0D546400F56BCD /* MovieConfig.swift */; };
 		F470034E29F26AF80034E787 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470034D29F26AF80034E787 /* NicknameViewController.swift */; };
 		F470037B29F3A7AC0034E787 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037A29F3A7AC0034E787 /* CommonView.swift */; };
 		F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470037C29F3A8EF0034E787 /* SecondViewController.swift */; };
@@ -98,6 +99,7 @@
 		F44B4E4229D806BC003658CD /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		F44B4E4429D80FC6003658CD /* PracticeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController2.swift; sourceTree = "<group>"; };
 		F4587CAB2A0D511600F56BCD /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		F4587CAD2A0D546400F56BCD /* MovieConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieConfig.swift; sourceTree = "<group>"; };
 		F470034D29F26AF80034E787 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		F470037A29F3A7AC0034E787 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		F470037C29F3A8EF0034E787 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				F4587CAB2A0D511600F56BCD /* MovieService.swift */,
+				F4587CAD2A0D546400F56BCD /* MovieConfig.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				F4BE7E392A09820500688732 /* TVViewController.swift in Sources */,
 				F4BE7E282A069A4000688732 /* Config_w.swift in Sources */,
 				F4B5F93E2A0508C5008DA7B7 /* DividerView.swift in Sources */,
+				F4587CAE2A0D546400F56BCD /* MovieConfig.swift in Sources */,
 				F470038829F3B2C00034E787 /* CarrotTableViewCell.swift in Sources */,
 				F470037D29F3A8EF0034E787 /* SecondViewController.swift in Sources */,
 				F4E1E8912A023A0E0040AEF7 /* MyPageViewController.swift in Sources */,

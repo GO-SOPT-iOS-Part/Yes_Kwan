@@ -26,10 +26,9 @@ final class WeatherService {
         let dataRequest = AF.request(url, method: .get, headers: header)
         
         dataRequest.responseData { response in
-            print(response)
             switch response.result {
             case .success:
-                print(response.result)
+                
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
