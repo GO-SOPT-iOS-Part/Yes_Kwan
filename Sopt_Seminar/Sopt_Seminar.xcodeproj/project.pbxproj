@@ -228,7 +228,8 @@
 				F4DDC4A32A03D1B900E97D1A /* Login */,
 				F4F7863129EFB641002E2A61 /* Extensions */,
 			);
-			path = Assignment;
+			name = Assignment;
+			path = ../Week3/Assignment;
 			sourceTree = "<group>";
 		};
 		F44B4E2229D7FA29003658CD = {
@@ -266,7 +267,6 @@
 		F470037929F3A4EA0034E787 /* Week3 */ = {
 			isa = PBXGroup;
 			children = (
-				F4289C5029EE639F0045BEC8 /* Assignment */,
 				F470039129F3BF9F0034E787 /* CollectionView */,
 				F470038229F3B1700034E787 /* TableView */,
 				F470037A29F3A7AC0034E787 /* CommonView.swift */,
@@ -327,6 +327,7 @@
 		F4BE7DE22A0618A900688732 /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				F4289C5029EE639F0045BEC8 /* Assignment */,
 				F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */,
 				F4BE7E222A06947C00688732 /* WeatherNetwork */,
 				F4BE7E202A06917000688732 /* SignInNetwork */,
