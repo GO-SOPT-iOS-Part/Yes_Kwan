@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
@@ -41,8 +42,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    // 5. 이미지 설정
+    // 5. 이미지 설정 -> URL객체를 만든 후 KingFisher의 setImage 메서드를 통해 영화포스터 띄워준다
     func setImage(_ name: String) {
-        poster.image = UIImage(named: name)?.resized(withPercentage: 3.0)
+        poster.kf.setImage(with: URL(string: name))
     }
 }

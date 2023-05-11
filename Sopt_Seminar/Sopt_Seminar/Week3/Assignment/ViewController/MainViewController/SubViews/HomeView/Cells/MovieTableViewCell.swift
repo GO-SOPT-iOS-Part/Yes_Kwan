@@ -9,8 +9,12 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     
-    // Poster 이미지 목록
-    private var items: [String] = ["movie1", "movie2", "movie3", "movie1", "movie2"]
+    // 현재 뷰에서 보이는 CollectionView상의 이미지 데이터 계속 reload
+    var datas: [Movie] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
 
     // init
     @available(*, unavailable)
@@ -109,15 +113,14 @@ extension MovieTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     
     // CollectionView 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.items.count
+        self.datas.count
     }
     
     // 반환 cell 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.className, for: indexPath) as! MovieCollectionViewCell
-        
-        cell.setImage(items[indexPath.row])
+        cell.setImage(datas[indexPath.row].url)
         return cell
     }
 }

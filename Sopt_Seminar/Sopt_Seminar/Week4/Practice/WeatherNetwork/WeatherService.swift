@@ -15,6 +15,7 @@ final class WeatherService {
     private init() {}
     
     //q=seoul&appid=0d268b100aab2067be1aeebe6b626058
+    //https://api.themoviedb.org/3/discover/movie
 
     func getInfo(key: String,
                  city: String,
@@ -25,10 +26,9 @@ final class WeatherService {
         let dataRequest = AF.request(url, method: .get, headers: header)
         
         dataRequest.responseData { response in
-            print(response)
             switch response.result {
             case .success:
-                print(response.result)
+                
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
