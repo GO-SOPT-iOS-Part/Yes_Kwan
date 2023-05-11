@@ -230,6 +230,7 @@
 		F4289C5029EE639F0045BEC8 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F4587CB62A0D87D700F56BCD /* Model */,
 				F4587CAA2A0D4B5F00F56BCD /* Network */,
 				F4BE7E2D2A09535D00688732 /* Protocols */,
 				F4BE7E302A095A6F00688732 /* MainViewController */,
@@ -278,9 +279,26 @@
 			children = (
 				F4587CAB2A0D511600F56BCD /* MovieService.swift */,
 				F4587CAD2A0D546400F56BCD /* MovieConfig.swift */,
-				F4587CB12A0D5E1200F56BCD /* MovieModel.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F4587CB62A0D87D700F56BCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4587CB12A0D5E1200F56BCD /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4587CB72A0D880900F56BCD /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */,
+				F4BE7E222A06947C00688732 /* WeatherNetwork */,
+				F4BE7E202A06917000688732 /* SignInNetwork */,
+			);
+			path = Practice;
 			sourceTree = "<group>";
 		};
 		F470037929F3A4EA0034E787 /* Week3 */ = {
@@ -346,10 +364,8 @@
 		F4BE7DE22A0618A900688732 /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				F4587CB72A0D880900F56BCD /* Practice */,
 				F4289C5029EE639F0045BEC8 /* Assignment */,
-				F4BE7DE82A06283200688732 /* NetworkResult<T>.swift */,
-				F4BE7E222A06947C00688732 /* WeatherNetwork */,
-				F4BE7E202A06917000688732 /* SignInNetwork */,
 			);
 			path = Week4;
 			sourceTree = "<group>";

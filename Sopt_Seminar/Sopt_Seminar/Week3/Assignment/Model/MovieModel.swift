@@ -55,7 +55,6 @@ enum OriginalLanguage: String, Codable {
     case fr = "fr"
 }
 
-
 struct Movie {
     let url: String
 }

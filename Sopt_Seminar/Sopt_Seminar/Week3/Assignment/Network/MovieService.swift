@@ -16,9 +16,6 @@ final class MovieService {
     
     private init() {}
     
-    //75df104409445c36a314b12eb0aa5fdb
-    //ko
-    
     func getInfo(key: String, language: String, adult: Bool, video: Bool, page: Int, completion: @escaping (NetworkState<Any>) -> Void) {
         
         let header: HTTPHeaders = [
