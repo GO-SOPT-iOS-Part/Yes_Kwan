@@ -10,8 +10,14 @@ import SnapKit
 
 class PageViewController: UITableViewCell {
     
-    // Poster 이미지 목록
-    private var items: [String] = ["poster1", "poster2", "poster1", "poster2", "poster1"]
+    // reload
+    var posters: [Movie] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    var posterCount: Int = 0
     
     // init
     @available(*, unavailable)
@@ -29,6 +35,8 @@ class PageViewController: UITableViewCell {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        grayDot.numberOfPages = posterCount
     }
     
     // layout setting + addSubView
@@ -79,7 +87,6 @@ class PageViewController: UITableViewCell {
     private lazy var grayDot: UIPageControl = {
         let dot = UIPageControl()
         dot.translatesAutoresizingMaskIntoConstraints = false
-        dot.numberOfPages = items.count
         dot.hidesForSinglePage = true
         dot.currentPageIndicatorTintColor = .systemGray
         dot.pageIndicatorTintColor = .white
@@ -100,7 +107,7 @@ extension PageViewController: UICollectionViewDataSource {
     
     // CollectionView 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.items.count
+        self.posters.count
     }
     
     // 반환 cell 설정
@@ -108,7 +115,7 @@ extension PageViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCollectionViewCell.className, for: indexPath) as! PosterCollectionViewCell
         
-        cell.setImage(items[indexPath.row])
+        cell.setImage(posters[indexPath.row].url)
         return cell
     }
     

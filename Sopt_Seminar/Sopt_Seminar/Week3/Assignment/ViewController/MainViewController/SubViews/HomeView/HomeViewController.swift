@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
         }
     }
     
+    var dotCount = 0
+    
     // 1. 테이블뷰 생성
     private let tableView: UITableView = {
         let table = UITableView()
@@ -44,7 +46,7 @@ class HomeViewController: UIViewController {
                     let picPath = MovieConfig.imgURL + "/original" + data.results[i].posterPath
                     self.movieList.append(Movie(url: picPath))
                 }
-                
+                self.dotCount = self.movieList.count
             default:
                 return
             }
@@ -95,6 +97,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PageViewController.className, for: indexPath) as? PageViewController else { return UITableViewCell() }
+            cell.posters = movieList
+            cell.posterCount = dotCount
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.className, for: indexPath) as? MovieTableViewCell else { return UITableViewCell() }
